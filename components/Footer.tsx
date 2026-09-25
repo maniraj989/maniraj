@@ -46,7 +46,7 @@ export default function Footer() {
           {/* Socials */}
           <div className="flex items-center space-x-4 text-theme-muted">
             <a
-              href="https://github.com/manirajsharma"
+              href="https://github.com/maniraj989"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-theme-text transition-colors p-1"
@@ -55,7 +55,7 @@ export default function Footer() {
               <GitHubIcon className="w-4 h-4" />
             </a>
             <a
-              href="https://linkedin.com/in/manirajsharma"
+              href="https://www.linkedin.com/in/maniraj-sharmma-221b69355/"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-theme-text transition-colors p-1"
@@ -64,7 +64,7 @@ export default function Footer() {
               <LinkedInIcon className="w-4 h-4" />
             </a>
             <a
-              href="mailto:contact@manirajsharma.dev"
+              href="mailto:manirajsharma193@gmail.com"
               className="hover:text-theme-text transition-colors text-xs font-mono"
               aria-label="Email"
             >

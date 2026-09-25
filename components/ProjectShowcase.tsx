@@ -32,7 +32,7 @@ export default function ProjectShowcase() {
           </div>
 
           <a
-            href="https://github.com/manirajsharma?tab=repositories"
+            href="https://github.com/maniraj989?tab=repositories"
             target="_blank"
             rel="noopener noreferrer"
             className="group mt-4 sm:mt-0 inline-flex items-center gap-2 text-xs font-mono tracking-wider text-theme-muted hover:text-[var(--accent-color)] transition-colors uppercase"

@@ -120,7 +120,7 @@ export default function ProjectsSlider() {
             </button>
 
             <a
-              href="https://github.com/manirajsharma?tab=repositories"
+              href="https://github.com/maniraj989?tab=repositories"
               target="_blank"
               rel="noopener noreferrer"
               className="hidden lg:inline-flex items-center gap-1.5 pl-3 text-xs font-mono text-theme-muted hover:text-[var(--accent-color)] uppercase tracking-wider transition-colors"

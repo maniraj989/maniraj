@@ -53,9 +53,9 @@ BT
 (MANIRAJ SHARMA) Tj
 /F1 12 Tf
 0 -30 Td
-(Full-Stack Web Developer - contact@manirajsharma.dev) Tj
+(Full-Stack Web Developer - manirajsharma193@gmail.com) Tj
 0 -25 Td
-(Portfolio: https://manirajsharma.dev | GitHub: @manirajsharma) Tj
+(Portfolio: https://manirajsharma.com.np | GitHub: @maniraj989) Tj
 ET
 endstream
 endobj

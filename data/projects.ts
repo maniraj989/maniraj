@@ -17,7 +17,7 @@ export const projectsData: Project[] = [
     image: "/images/project-travel.jpg",
     technologies: ["Next.js", "Node.js", "MongoDB"],
     liveUrl: "https://horizonpeak-travel.demo",
-    githubUrl: "https://github.com/manirajsharma/travel-booking-platform",
+    githubUrl: "https://github.com/maniraj989/travel-booking-platform",
     features: [
       "Dynamic destination search and filtering",
       "Interactive itinerary planning",
@@ -32,7 +32,7 @@ export const projectsData: Project[] = [
     image: "/images/project-expense.jpg",
     technologies: ["React", "Express.js", "MongoDB"],
     liveUrl: "https://financehub.demo",
-    githubUrl: "https://github.com/manirajsharma/expense-tracker",
+    githubUrl: "https://github.com/maniraj989/expense-tracker",
     features: [
       "Real-time expense categorization",
       "Interactive chart breakdown with Recharts",
@@ -47,7 +47,7 @@ export const projectsData: Project[] = [
     image: "/images/project-ecommerce.jpg",
     technologies: ["Next.js", "Stripe", "Tailwind CSS"],
     liveUrl: "https://nordicnest.demo",
-    githubUrl: "https://github.com/manirajsharma/minimal-ecommerce",
+    githubUrl: "https://github.com/maniraj989/minimal-ecommerce",
     features: [
       "Server-side rendered product catalog",
       "Persistent cart state with local sync",
@@ -62,7 +62,7 @@ export const projectsData: Project[] = [
     image: "/images/project-zenith.jpg",
     technologies: ["Next.js", "TypeScript", "Docker"],
     liveUrl: "https://zenithdev.demo",
-    githubUrl: "https://github.com/manirajsharma/zenith-dev-platform",
+    githubUrl: "https://github.com/maniraj989/zenith-dev-platform",
     features: [
       "Embedded code sandbox and instant preview",
       "REST & GraphQL endpoint latency monitoring",

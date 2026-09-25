@@ -23,7 +23,7 @@ export default function GithubActivity() {
   const weeks = useMemo(() => generateContributionGrid(52), []);
 
   useEffect(() => {
-    fetchGitHubUserData("manirajsharma").then((data) => {
+    fetchGitHubUserData("maniraj989").then((data) => {
       if (data) setStats(data);
     });
   }, []);
@@ -58,7 +58,7 @@ export default function GithubActivity() {
           </div>
 
           <a
-            href={stats?.profileUrl || "https://github.com/manirajsharma"}
+            href={stats?.profileUrl || "https://github.com/maniraj989"}
             target="_blank"
             rel="noopener noreferrer"
             className="group mt-4 sm:mt-0 inline-flex items-center gap-2 text-xs font-mono tracking-wider text-neutral-400 hover:text-white uppercase transition-colors"

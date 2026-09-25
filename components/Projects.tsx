@@ -18,7 +18,7 @@ export default function Projects() {
           </div>
 
           <a
-            href="https://github.com/manirajsharma?tab=repositories"
+            href="https://github.com/maniraj989?tab=repositories"
             target="_blank"
             rel="noopener noreferrer"
             className="group mt-4 sm:mt-0 inline-flex items-center gap-1.5 text-xs font-medium text-[#111111] hover:text-editorial-accent transition-colors"

@@ -25,9 +25,9 @@ export const metadata: Metadata = {
     "Node.js",
     "India Web Developer",
   ],
-  authors: [{ name: "Maniraj Sharma", url: "https://manirajsharma.dev" }],
+  authors: [{ name: "Maniraj Sharma", url: "https://manirajsharma.com.np" }],
   creator: "Maniraj Sharma",
-  metadataBase: new URL("https://manirajsharma.dev"),
+  metadataBase: new URL("https://manirajsharma.com.np"),
   alternates: {
     canonical: "/",
   },
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     title: "Maniraj Sharma | Full-Stack Web Developer",
     description:
       "Full-stack web developer and creative engineer building scalable web applications and interfaces.",
-    url: "https://manirajsharma.dev",
+    url: "https://manirajsharma.com.np",
     siteName: "Maniraj Sharma",
     locale: "en_US",
     type: "website",
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     title: "Maniraj Sharma | Full-Stack Web Developer",
     description:
       "Full-stack web developer and creative engineer building scalable web applications and interfaces.",
-    creator: "@manirajsharma",
+    creator: "@maniraj989",
   },
 };
 
@@ -59,10 +59,10 @@ export default function RootLayout({
     "@type": "Person",
     name: "Maniraj Sharma",
     jobTitle: "Full-Stack Web Developer",
-    url: "https://manirajsharma.dev",
+    url: "https://manirajsharma.com.np",
     sameAs: [
-      "https://github.com/manirajsharma",
-      "https://linkedin.com/in/manirajsharma",
+      "https://github.com/maniraj989",
+      "https://www.linkedin.com/in/maniraj-sharmma-221b69355/",
     ],
     knowsAbout: [
       "JavaScript",

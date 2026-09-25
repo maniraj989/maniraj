@@ -164,10 +164,10 @@ export default function Contact() {
                 Direct Contact
               </span>
               <a
-                href="mailto:contact@manirajsharma.dev"
+                href="mailto:manirajsharma193@gmail.com"
                 className="text-base sm:text-lg font-mono font-medium text-theme-text hover:text-[var(--accent-color)] transition-colors break-all"
               >
-                contact@manirajsharma.dev
+                manirajsharma193@gmail.com
               </a>
             </div>
 
@@ -177,29 +177,31 @@ export default function Contact() {
               </span>
               <div className="flex flex-col space-y-3 font-mono text-sm">
                 <a
-                  href="https://github.com/manirajsharma"
+                  href="https://github.com/maniraj989"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-3 text-theme-muted hover:text-[var(--accent-color)] transition-colors"
                 >
                   <GitHubIcon className="w-4 h-4" />
-                  <span>github.com/manirajsharma</span>
+                  <span>github.com/maniraj989</span>
                 </a>
                 <a
-                  href="https://linkedin.com/in/manirajsharma"
+                  href="https://www.linkedin.com/in/maniraj-sharmma-221b69355/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-3 text-theme-muted hover:text-[var(--accent-color)] transition-colors"
                 >
                   <LinkedInIcon className="w-4 h-4" />
-                  <span>linkedin.com/in/manirajsharma</span>
+                  <span>linkedin.com/in/maniraj-sharmma-221b69355</span>
                 </a>
                 <a
-                  href="mailto:contact@manirajsharma.dev"
+                  href="https://manirajsharma.com.np"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="flex items-center gap-3 text-theme-muted hover:text-[var(--accent-color)] transition-colors"
                 >
                   <Mail className="w-4 h-4" />
-                  <span>manirajsharma.dev</span>
+                  <span>manirajsharma.com.np</span>
                 </a>
               </div>
             </div>
