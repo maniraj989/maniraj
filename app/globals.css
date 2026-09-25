@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-sans: 'Space Grotesk', -apple-system, sans-serif;
+  --font-display: 'Instrument Serif', Georgia, serif;
+
+  /* Default Light Mode */
+  --bg-main: #F7F7F5;
+  --bg-surface: #FFFFFF;
+  --bg-surface-elevated: #F0F0EB;
+  --text-main: #111318;
+  --text-muted: #686D76;
+  --border-subtle: #E4E4DE;
+  --border-strong: #C9C9C1;
+
+  /* Default Accent (Electric Blue) */
+  --accent-color: #315BFF;
+  --accent-rgb: 49, 91, 255;
+  --accent-hover: #2046E0;
+}
+
+html.dark {
+  /* Dark Mode Palette matching requirements */
+  --bg-main: #080A0D;
+  --bg-surface: #101318;
+  --bg-surface-elevated: #161B22;
+  --text-main: #F4F5F7;
+  --text-muted: #9298A3;
+  --border-subtle: #252A33;
+  --border-strong: #38404D;
+}
+
+html {
+  scroll-behavior: smooth;
+  color-scheme: dark light;
+}
+
+body {
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: background-color 300ms ease, color 300ms ease;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-main);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-strong);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-color);
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Selection Color */
+::selection {
+  background-color: var(--accent-color);
+  color: #FFFFFF;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent-color);
+  outline-offset: 2px;
+}
+
+.font-editorial-serif {
+  font-family: var(--font-display);
+}
