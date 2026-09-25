@@ -1,67 +1,90 @@
 %PDF-1.4
 1 0 obj
-<<
-  /Type /Catalog
-  /Pages 2 0 R
->>
+<< /Type /Catalog /Pages 2 0 R >>
 endobj
 2 0 obj
-<<
-  /Type /Pages
-  /Kids [3 0 R]
-  /Count 1
->>
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
 endobj
 3 0 obj
-<<
-  /Type /Page
-  /Parent 2 0 R
-  /MediaBox [0 0 612 792]
-  /Resources <<
-    /Font <<
-      /F1 4 0 R
-    >>
-  >>
-  /Contents 5 0 R
->>
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 4 0 R /F2 5 0 R /F3 6 0 R >> >> /Contents 7 0 R >>
 endobj
 4 0 obj
-<<
-  /Type /Font
-  /Subtype /Type1
-  /BaseFont /Helvetica
->>
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
 endobj
 5 0 obj
-<<
-  /Length 170
->>
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+6 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Oblique >>
+endobj
+7 0 obj
+<< /Length 4823 >>
 stream
-BT
-/F1 22 Tf
-50 720 Td
-(MANIRAJ SHARMA) Tj
-/F1 12 Tf
-0 -30 Td
-(Full-Stack Web Developer - manirajsharma193@gmail.com) Tj
-0 -25 Td
-(Portfolio: https://manirajsharma.com.np | GitHub: @maniraj989) Tj
-ET
+BT /F2 22 Tf 0.05 0.05 0.05 rg 1 0 0 1 45 745 Tm (MANIRAJ SHARMA) Tj ET
+BT /F2 12 Tf 0.2 0.4 0.7 rg 1 0 0 1 45 727 Tm (FULL-STACK WEB DEVELOPER) Tj ET
+BT /F1 9 Tf 0.3 0.3 0.3 rg 1 0 0 1 45 711 Tm (Email: manirajsharma193@gmail.com   |   Website: https://manirajsharma.com.np) Tj ET
+BT /F1 9 Tf 0.3 0.3 0.3 rg 1 0 0 1 45 698 Tm (GitHub: https://github.com/maniraj989   |   LinkedIn: https://www.linkedin.com/in/maniraj-sharmma-221b69355/) Tj ET
+BT /F1 9 Tf 0.3 0.3 0.3 rg 1 0 0 1 45 685 Tm (Location: Bengaluru, India / Kathmandu, Nepal) Tj ET
+q 0.75 0.75 0.75 RG 1 w 45 673 m 567 673 l S Q
+BT /F2 11 Tf 0.1 0.1 0.1 rg 1 0 0 1 45 657 Tm (PROFESSIONAL SUMMARY) Tj ET
+q 0.85 0.85 0.85 RG 0.5 w 45 653 m 567 653 l S Q
+BT /F1 9 Tf 0.2 0.2 0.2 rg 1 0 0 1 45 640 Tm (Full-Stack Web Developer dedicated to engineering performant, scalable, and responsive web applications.) Tj ET
+BT /F1 9 Tf 0.2 0.2 0.2 rg 1 0 0 1 45 628 Tm (Specialized in modern JavaScript/TypeScript, React, Next.js, and Node.js microservices with clean code architecture,) Tj ET
+BT /F1 9 Tf 0.2 0.2 0.2 rg 1 0 0 1 45 616 Tm (high performance, robust state management, and intuitive user experiences.) Tj ET
+BT /F2 11 Tf 0.1 0.1 0.1 rg 1 0 0 1 45 598 Tm (WORK EXPERIENCE) Tj ET
+q 0.85 0.85 0.85 RG 0.5 w 45 594 m 567 594 l S Q
+BT /F2 10 Tf 0.05 0.05 0.05 rg 1 0 0 1 45 580 Tm (Senior Full Stack Developer) Tj ET
+BT /F1 9 Tf 0.3 0.3 0.3 rg 1 0 0 1 482 580 Tm (Dec 2025 - Present) Tj ET
+BT /F3 9.5 Tf 0.25 0.25 0.25 rg 1 0 0 1 45 568 Tm (MM Digital Garage) Tj ET
+BT /F1 9 Tf 0.2 0.2 0.2 rg 1 0 0 1 53 555 Tm (- Building and maintaining full-stack web applications with a focus on scalable architecture,) Tj ET
+BT /F1 9 Tf 0.2 0.2 0.2 rg 1 0 0 1 59 544 Tm (responsive interfaces, and reliable user experiences.) Tj ET
+BT /F2 8.5 Tf 0.3 0.4 0.5 rg 1 0 0 1 53 532 Tm (Technologies: React - JavaScript - Next.js - Node.js - MongoDB) Tj ET
+BT /F2 10 Tf 0.05 0.05 0.05 rg 1 0 0 1 45 516 Tm (Full Stack Developer) Tj ET
+BT /F1 9 Tf 0.3 0.3 0.3 rg 1 0 0 1 472 516 Tm (Sep 2024 - Nov 2025) Tj ET
+BT /F3 9.5 Tf 0.25 0.25 0.25 rg 1 0 0 1 45 504 Tm (Digital Cafe India) Tj ET
+BT /F1 9 Tf 0.2 0.2 0.2 rg 1 0 0 1 53 491 Tm (- Developed responsive web applications across frontend and backend, focusing on clean code,) Tj ET
+BT /F1 9 Tf 0.2 0.2 0.2 rg 1 0 0 1 59 480 Tm (performance, and seamless user experiences.) Tj ET
+BT /F2 8.5 Tf 0.3 0.4 0.5 rg 1 0 0 1 53 468 Tm (Technologies: React - JavaScript - Node.js - Express.js - MongoDB) Tj ET
+BT /F2 10 Tf 0.05 0.05 0.05 rg 1 0 0 1 45 452 Tm (Frontend Developer & Designer) Tj ET
+BT /F1 9 Tf 0.3 0.3 0.3 rg 1 0 0 1 472 452 Tm (Jun 2023 - Jul 2024) Tj ET
+BT /F3 9.5 Tf 0.25 0.25 0.25 rg 1 0 0 1 45 440 Tm (Freelance) Tj ET
+BT /F1 9 Tf 0.2 0.2 0.2 rg 1 0 0 1 53 427 Tm (- Delivered custom, lightweight websites and custom digital interfaces for early startups.) Tj ET
+BT /F1 9 Tf 0.2 0.2 0.2 rg 1 0 0 1 59 416 Tm (Maintained high quality codebases, fast load times, and custom graphic designs.) Tj ET
+BT /F2 8.5 Tf 0.3 0.4 0.5 rg 1 0 0 1 53 404 Tm (Technologies: HTML - CSS - JavaScript - React - Figma) Tj ET
+BT /F2 11 Tf 0.1 0.1 0.1 rg 1 0 0 1 45 386 Tm (EDUCATION) Tj ET
+q 0.85 0.85 0.85 RG 0.5 w 45 382 m 567 382 l S Q
+BT /F2 10 Tf 0.05 0.05 0.05 rg 1 0 0 1 45 368 Tm (Bachelor of Technology \(B.Tech\) in Computer Science and Engineering) Tj ET
+BT /F1 9 Tf 0.3 0.3 0.3 rg 1 0 0 1 502 368 Tm (2025 - 2028) Tj ET
+BT /F3 9.5 Tf 0.25 0.25 0.25 rg 1 0 0 1 45 356 Tm (SRM Institute of Science and Technology \(SRM IST\), Bengaluru, India) Tj ET
+BT /F2 9 Tf 0.15 0.5 0.3 rg 1 0 0 1 482 356 Tm (CGPA: 8.7 / 10.0) Tj ET
+BT /F2 10 Tf 0.05 0.05 0.05 rg 1 0 0 1 45 340 Tm (Higher Secondary Education - Science \(Computer\)) Tj ET
+BT /F1 9 Tf 0.3 0.3 0.3 rg 1 0 0 1 502 340 Tm (2022 - 2024) Tj ET
+BT /F3 9.5 Tf 0.25 0.25 0.25 rg 1 0 0 1 45 328 Tm (Xavier International College, Kathmandu, Nepal) Tj ET
+BT /F2 9 Tf 0.15 0.5 0.3 rg 1 0 0 1 482 328 Tm (GPA: 3.16 / 4.0) Tj ET
+BT /F2 11 Tf 0.1 0.1 0.1 rg 1 0 0 1 45 310 Tm (TECHNICAL SKILLS) Tj ET
+q 0.85 0.85 0.85 RG 0.5 w 45 306 m 567 306 l S Q
+BT /F2 9 Tf 0.1 0.1 0.1 rg 1 0 0 1 45 292 Tm (Languages & Core:) Tj ET
+BT /F1 9 Tf 0.25 0.25 0.25 rg 1 0 0 1 150 292 Tm (JavaScript \(ES6+\), TypeScript, HTML5, CSS3, SQL) Tj ET
+BT /F2 9 Tf 0.1 0.1 0.1 rg 1 0 0 1 45 279 Tm (Frontend Ecosystem:) Tj ET
+BT /F1 9 Tf 0.25 0.25 0.25 rg 1 0 0 1 150 279 Tm (React, Next.js \(App Router\), Tailwind CSS, Responsive Design, State Management) Tj ET
+BT /F2 9 Tf 0.1 0.1 0.1 rg 1 0 0 1 45 266 Tm (Backend & Database:) Tj ET
+BT /F1 9 Tf 0.25 0.25 0.25 rg 1 0 0 1 150 266 Tm (Node.js, Express.js, MongoDB, MySQL, RESTful APIs) Tj ET
+BT /F2 9 Tf 0.1 0.1 0.1 rg 1 0 0 1 45 253 Tm (Developer Tools:) Tj ET
+BT /F1 9 Tf 0.25 0.25 0.25 rg 1 0 0 1 150 253 Tm (Git, GitHub, Docker, Figma, Postman, Vite, Vercel) Tj ET
 endstream
 endobj
 xref
-0 6
+0 8
 0000000000 65535 f 
 0000000009 00000 n 
 0000000058 00000 n 
 0000000115 00000 n 
-0000000262 00000 n 
-0000000341 00000 n 
+0000000261 00000 n 
+0000000331 00000 n 
+0000000406 00000 n 
+0000000484 00000 n 
 trailer
-<<
-  /Size 6
-  /Root 1 0 R
->>
+<< /Size 8 /Root 1 0 R >>
 startxref
-563
+5359
 %%EOF
