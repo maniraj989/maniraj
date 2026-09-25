@@ -43,7 +43,7 @@ export default function CodeVisual() {
           {/* URL Bar */}
           <div className="px-4 py-1 rounded-md bg-theme-surface border border-theme-border text-[11px] font-mono text-theme-muted flex items-center gap-1.5">
             <span className="text-[var(--accent-color)]">https://</span>
-            <span className="text-theme-text font-medium">maniraj.dev</span>
+            <span className="text-theme-text font-medium">manirajsharma.com.np</span>
           </div>
 
           {/* Live Indicator */}
