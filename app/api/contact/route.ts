@@ -3,7 +3,7 @@ import { Resend } from "resend";
 
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const RECIPIENT_EMAIL = process.env.CONTACT_RECIPIENT_EMAIL || "manirajsharma193@gmail.com";
-const FROM_EMAIL = process.env.RESEND_FROM_EMAIL || "Portfolio Contact <onboarding@resend.dev>";
+const FROM_EMAIL = process.env.RESEND_FROM_EMAIL || "Maniraj Sharma <contact@manirajsharma.com.np>";
 
 export async function POST(request: Request) {
   try {
@@ -18,10 +18,10 @@ export async function POST(request: Request) {
 
     const { name, email, message } = body;
 
-    // 1. Validation: Name
+    // 1. Server-side validation: Name
     if (!name || typeof name !== "string" || name.trim().length === 0) {
       return NextResponse.json(
-        { success: false, error: "Please provide your name." },
+        { success: false, error: "Please enter your name." },
         { status: 400 }
       );
     }
@@ -32,22 +32,22 @@ export async function POST(request: Request) {
       );
     }
 
-    // 2. Validation: Email
+    // 2. Server-side validation: Email
     if (!email || typeof email !== "string" || email.trim().length === 0) {
       return NextResponse.json(
-        { success: false, error: "Please provide your email address." },
+        { success: false, error: "Please enter your email address." },
         { status: 400 }
       );
     }
     const cleanEmail = email.trim();
     if (!EMAIL_REGEX.test(cleanEmail) || cleanEmail.length > 150) {
       return NextResponse.json(
-        { success: false, error: "Please provide a valid email address." },
+        { success: false, error: "Please enter a valid email address." },
         { status: 400 }
       );
     }
 
-    // 3. Validation: Message
+    // 3. Server-side validation: Message
     if (!message || typeof message !== "string" || message.trim().length === 0) {
       return NextResponse.json(
         { success: false, error: "Please enter your message." },
@@ -64,42 +64,44 @@ export async function POST(request: Request) {
     const cleanName = name.trim();
     const cleanMessage = message.trim();
 
-    // 4. Check for Resend API Key
+    // 4. Verify API Key exists
     const apiKey = process.env.RESEND_API_KEY;
     if (!apiKey) {
-      console.warn("RESEND_API_KEY is not configured in environment variables.");
+      console.warn("RESEND_API_KEY environment variable is missing.");
       return NextResponse.json(
         {
           success: false,
-          error: "Email service is not currently configured. Please email manirajsharma193@gmail.com directly.",
+          error: "Email service is temporarily unavailable. Please try again later or email manirajsharma193@gmail.com directly.",
         },
         { status: 503 }
       );
     }
 
-    // 5. Send Email via Resend
+    // 5. Initialize Resend client
     const resend = new Resend(apiKey);
 
     const emailSubject = `New Portfolio Contact — ${cleanName}`;
-    const textContent = `Name:\n${cleanName}\n\nEmail:\n${cleanEmail}\n\nMessage:\n${cleanMessage}`;
+    const textContent = `Name:\n${cleanName}\n\nEmail:\n${cleanEmail}\n\nProject Brief / Message:\n${cleanMessage}`;
     const htmlContent = `
-      <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 24px; color: #111827; background-color: #ffffff; border: 1px solid #e5e7eb; border-radius: 8px;">
-        <h2 style="margin-top: 0; font-size: 20px; color: #111827; border-bottom: 1px solid #e5e7eb; padding-bottom: 12px;">New Portfolio Contact</h2>
-        <p style="margin: 16px 0 6px 0; font-size: 13px; color: #6b7280; text-transform: uppercase; font-weight: 600;">Name</p>
+      <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 28px; color: #111827; background-color: #ffffff; border: 1px solid #e5e7eb; border-radius: 8px;">
+        <h2 style="margin-top: 0; font-size: 20px; font-weight: 600; color: #111827; border-bottom: 1px solid #e5e7eb; padding-bottom: 12px;">New Portfolio Contact</h2>
+        
+        <p style="margin: 18px 0 4px 0; font-size: 12px; color: #6b7280; text-transform: uppercase; font-weight: 600; letter-spacing: 0.05em;">Name:</p>
         <p style="margin: 0; font-size: 15px; font-weight: 500; color: #111827;">${escapeHtml(cleanName)}</p>
         
-        <p style="margin: 16px 0 6px 0; font-size: 13px; color: #6b7280; text-transform: uppercase; font-weight: 600;">Email</p>
+        <p style="margin: 18px 0 4px 0; font-size: 12px; color: #6b7280; text-transform: uppercase; font-weight: 600; letter-spacing: 0.05em;">Email:</p>
         <p style="margin: 0; font-size: 15px; font-weight: 500; color: #111827;"><a href="mailto:${escapeHtml(cleanEmail)}" style="color: #2563eb; text-decoration: none;">${escapeHtml(cleanEmail)}</a></p>
         
-        <p style="margin: 16px 0 6px 0; font-size: 13px; color: #6b7280; text-transform: uppercase; font-weight: 600;">Message</p>
+        <p style="margin: 18px 0 4px 0; font-size: 12px; color: #6b7280; text-transform: uppercase; font-weight: 600; letter-spacing: 0.05em;">Project Brief / Message:</p>
         <div style="margin: 0; font-size: 14px; line-height: 1.6; color: #374151; white-space: pre-wrap; background-color: #f9fafb; padding: 14px; border-radius: 6px; border: 1px solid #e5e7eb;">${escapeHtml(cleanMessage)}</div>
         
         <hr style="border: none; border-top: 1px solid #e5e7eb; margin: 24px 0 16px 0;" />
-        <p style="margin: 0; font-size: 12px; color: #9ca3af;">Sent from Maniraj Sharma Portfolio Contact Form</p>
+        <p style="margin: 0; font-size: 12px; color: #9ca3af;">Sent via contact form on manirajsharma.com.np</p>
       </div>
     `;
 
-    const { data, error } = await resend.emails.send({
+    // 6. Send email with verified sender domain
+    let sendResult = await resend.emails.send({
       from: FROM_EMAIL,
       to: [RECIPIENT_EMAIL],
       replyTo: cleanEmail,
@@ -108,8 +110,25 @@ export async function POST(request: Request) {
       html: htmlContent,
     });
 
-    if (error) {
-      console.error("Resend delivery error:", error);
+    // Auto-fallback if the custom domain is still pending or not verified
+    if (sendResult.error && FROM_EMAIL !== "Portfolio Contact <onboarding@resend.dev>") {
+      console.warn("Primary sender returned error, retrying with fallback:", sendResult.error.message);
+      const fallbackResult = await resend.emails.send({
+        from: "Portfolio Contact <onboarding@resend.dev>",
+        to: [RECIPIENT_EMAIL],
+        replyTo: cleanEmail,
+        subject: emailSubject,
+        text: textContent,
+        html: htmlContent,
+      });
+
+      if (!fallbackResult.error) {
+        sendResult = fallbackResult;
+      }
+    }
+
+    if (sendResult.error) {
+      console.error("Resend delivery failed:", sendResult.error);
       return NextResponse.json(
         {
           success: false,
@@ -122,7 +141,7 @@ export async function POST(request: Request) {
     return NextResponse.json({
       success: true,
       message: "Message sent successfully.",
-      id: data?.id,
+      id: sendResult.data?.id,
     });
   } catch (err) {
     console.error("Contact API unexpected error:", err);
