@@ -19,6 +19,9 @@ export const experienceData: ExperienceItem[] = [
     startDate: "Dec 2025",
     endDate: null,
     current: true,
+    description:
+      "Building and maintaining full-stack web applications with a focus on scalable architecture, responsive interfaces, and reliable user experiences.",
+    technologies: ["React", "JavaScript", "Next.js", "Node.js", "MongoDB"],
   },
   {
     id: "digital-cafe-india",
@@ -28,6 +31,9 @@ export const experienceData: ExperienceItem[] = [
     startDate: "Sep 2024",
     endDate: "Nov 2025",
     current: false,
+    description:
+      "Developed responsive web applications across frontend and backend, focusing on clean code, performance, and seamless user experiences.",
+    technologies: ["React", "JavaScript", "Node.js", "Express.js", "MongoDB"],
   },
   {
     id: "freelance-frontend",
