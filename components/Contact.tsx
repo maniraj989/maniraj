@@ -28,15 +28,41 @@ export default function Contact() {
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSent, setIsSent] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    setTimeout(() => {
-      setIsSubmitting(false);
+    setErrorMessage("");
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const result = await response.json().catch(() => null);
+
+      if (!response.ok || !result?.success) {
+        throw new Error(
+          result?.error || "Failed to send message. Please email manirajsharma193@gmail.com directly."
+        );
+      }
+
       setIsSent(true);
       setFormData({ name: "", email: "", message: "" });
-    }, 500);
+    } catch (err: unknown) {
+      const message =
+        err instanceof Error
+          ? err.message
+          : "Failed to send message. Please email manirajsharma193@gmail.com directly.";
+      setErrorMessage(message);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -132,6 +158,12 @@ export default function Contact() {
                         className="w-full px-4 py-2.5 rounded-lg border border-theme-border bg-theme-elevated text-sm text-theme-text placeholder:text-theme-muted/50 focus:outline-none focus:border-[var(--accent-color)] resize-none"
                       />
                     </div>
+
+                    {errorMessage && (
+                      <div className="p-3 rounded-lg bg-rose-500/10 border border-rose-500/30 text-rose-400 text-xs font-mono">
+                        {errorMessage}
+                      </div>
+                    )}
 
                     <div className="flex items-center justify-between pt-2">
                       <button
