@@ -1,8 +1,14 @@
 "use client";
 
-import { useState, useEffect, useMemo } from "react";
-import { ArrowRight, BookOpen, Users, GitCommit } from "lucide-react";
-import { generateContributionGrid, fetchGitHubUserData, GitHubStats } from "@/lib/github";
+import { useState, useEffect } from "react";
+import { ArrowRight, BookOpen, GitCommit, Calendar, Sparkles } from "lucide-react";
+import {
+  fetchGitHubCalendarData,
+  fetchGitHubUserData,
+  GitHubStats,
+  WeekContributions,
+  MonthLabel,
+} from "@/lib/github";
 
 function GitHubIcon({ className }: { className?: string }) {
   return (
@@ -16,30 +22,85 @@ function GitHubIcon({ className }: { className?: string }) {
   );
 }
 
-const MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
-
 export default function GithubActivity() {
   const [stats, setStats] = useState<GitHubStats | null>(null);
-  const weeks = useMemo(() => generateContributionGrid(52), []);
+  const [weeks, setWeeks] = useState<WeekContributions[]>([]);
+  const [monthLabels, setMonthLabels] = useState<MonthLabel[]>([]);
+  const [totalContributions, setTotalContributions] = useState<number>(89);
+  const [activeDays, setActiveDays] = useState<number>(30);
+  const [isLoading, setIsLoading] = useState<boolean>(true);
 
   useEffect(() => {
-    fetchGitHubUserData("maniraj989").then((data) => {
-      if (data) setStats(data);
-    });
+    let isMounted = true;
+
+    async function loadData() {
+      try {
+        const [calendarResult, userResult] = await Promise.all([
+          fetchGitHubCalendarData("maniraj989"),
+          fetchGitHubUserData("maniraj989"),
+        ]);
+
+        if (!isMounted) return;
+
+        if (calendarResult) {
+          setWeeks(calendarResult.weeks);
+          setMonthLabels(calendarResult.monthLabels);
+          setTotalContributions(calendarResult.totalContributions);
+
+          // Calculate active days with commits
+          let activeCount = 0;
+          calendarResult.weeks.forEach((w) => {
+            w.days.forEach((d) => {
+              if (d.count > 0) activeCount++;
+            });
+          });
+          setActiveDays(activeCount);
+        }
+
+        if (userResult) {
+          setStats(userResult);
+        }
+      } catch (err) {
+        console.error("Error loading GitHub data:", err);
+      } finally {
+        if (isMounted) setIsLoading(false);
+      }
+    }
+
+    loadData();
+
+    return () => {
+      isMounted = false;
+    };
   }, []);
 
   const getCellColor = (level: number) => {
     switch (level) {
       case 1:
-        return "bg-emerald-900/60";
+        return "bg-[#0e4429] hover:bg-[#006d32]";
       case 2:
-        return "bg-emerald-600";
+        return "bg-[#006d32] hover:bg-[#26a641]";
       case 3:
-        return "bg-emerald-400";
+        return "bg-[#26a641] hover:bg-[#39d353]";
       case 4:
-        return "bg-emerald-300";
+        return "bg-[#39d353] hover:bg-[#56ff77]";
       default:
-        return "bg-[#1E242E]";
+        return "bg-[#161B22] hover:bg-[#21262d]";
+    }
+  };
+
+  const formatDateTooltip = (dateStr: string, count: number) => {
+    try {
+      const d = new Date(dateStr + "T00:00:00");
+      const formatted = d.toLocaleDateString("en-US", {
+        month: "short",
+        day: "numeric",
+        year: "numeric",
+      });
+      if (count === 0) return `No contributions on ${formatted}`;
+      return `${count} contribution${count === 1 ? "" : "s"} on ${formatted}`;
+    } catch {
+      return `${dateStr}: ${count} contributions`;
     }
   };
 
@@ -49,8 +110,12 @@ export default function GithubActivity() {
         {/* Section Header */}
         <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-16 pb-6 border-b border-[#252A33]">
           <div>
-            <span className="text-[11px] font-mono tracking-widest text-[var(--accent-color)] uppercase font-semibold block mb-2">
-              06 // Public Code
+            <span className="text-[11px] font-mono tracking-widest text-[var(--accent-color)] uppercase font-semibold block mb-2 flex items-center gap-2">
+              <span>06 // Public Workspace</span>
+              <span className="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-mono bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+                <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse mr-1.5" />
+                Live GitHub Sync
+              </span>
             </span>
             <h2 className="font-editorial-serif text-[clamp(2.5rem,5.5vw,4.5rem)] font-normal tracking-tight text-white leading-tight">
               Open Source / Activity
@@ -63,7 +128,7 @@ export default function GithubActivity() {
             rel="noopener noreferrer"
             className="group mt-4 sm:mt-0 inline-flex items-center gap-2 text-xs font-mono tracking-wider text-neutral-400 hover:text-white uppercase transition-colors"
           >
-            <span>View GitHub Profile</span>
+            <span>View GitHub @maniraj989</span>
             <ArrowRight className="w-3.5 h-3.5 transition-transform duration-150 group-hover:translate-x-1" />
           </a>
         </div>
@@ -71,28 +136,51 @@ export default function GithubActivity() {
         {/* 2-Column: Graph on Left, Metrics on Right */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           {/* Contribution Graph */}
-          <div className="lg:col-span-8 p-6 rounded-2xl bg-[#0D1117] border border-[#252A33] overflow-x-auto no-scrollbar">
-            <div className="flex justify-between text-[11px] font-mono text-neutral-500 mb-3 pl-8 min-w-[580px]">
-              {MONTHS.map((m) => (
-                <span key={m}>{m}</span>
+          <div className="lg:col-span-8 p-6 rounded-2xl bg-[#0D1117] border border-[#252A33] overflow-x-auto no-scrollbar shadow-2xl">
+            {/* Header info inside card */}
+            <div className="flex items-center justify-between mb-4 pb-3 border-b border-[#21262d]/60 min-w-[720px]">
+              <div className="flex items-center gap-2 text-xs font-mono text-neutral-300">
+                <Calendar className="w-3.5 h-3.5 text-emerald-400" />
+                <span>
+                  <strong className="text-white font-semibold">{totalContributions}</strong> contributions in the last year
+                </span>
+              </div>
+              <span className="text-[10px] font-mono text-neutral-500">
+                github.com/maniraj989
+              </span>
+            </div>
+
+            {/* Month labels accurately positioned over columns */}
+            <div className="relative h-4 mb-2 pl-8 min-w-[720px]">
+              {monthLabels.map((m, idx) => (
+                <span
+                  key={`${m.label}-${idx}`}
+                  style={{ left: `${32 + m.colIndex * 13.5}px` }}
+                  className="absolute text-[10px] font-mono text-neutral-400 select-none"
+                >
+                  {m.label}
+                </span>
               ))}
             </div>
 
-            <div className="flex gap-[3.5px] min-w-[580px]">
+            {/* Day grid */}
+            <div className="flex gap-[3.5px] min-w-[720px]">
+              {/* Day of week labels */}
               <div className="flex flex-col justify-between text-[10px] text-neutral-500 font-mono pr-2 select-none h-[100px]">
                 <span>Mon</span>
                 <span>Wed</span>
                 <span>Fri</span>
               </div>
 
+              {/* Weeks */}
               <div className="flex gap-[3.5px]">
                 {weeks.map((week, wIdx) => (
                   <div key={wIdx} className="flex flex-col gap-[3.5px]">
                     {week.days.map((day, dIdx) => (
                       <div
-                        key={dIdx}
-                        title={`${day.date}: ${day.count} contributions`}
-                        className={`w-[10px] h-[10px] rounded-[2px] transition-transform duration-75 hover:scale-125 ${getCellColor(
+                        key={`${day.date}-${dIdx}`}
+                        title={formatDateTooltip(day.date, day.count)}
+                        className={`w-[10px] h-[10px] rounded-[2px] transition-all duration-75 hover:scale-125 cursor-pointer ${getCellColor(
                           day.level
                         )}`}
                       />
@@ -102,18 +190,20 @@ export default function GithubActivity() {
               </div>
             </div>
 
+            {/* Footer with legend */}
             <div className="mt-5 flex items-center justify-between text-[11px] font-mono text-neutral-400 pt-4 border-t border-[#252A33]">
               <span className="flex items-center gap-1.5">
                 <GitCommit className="w-3.5 h-3.5 text-[var(--accent-color)]" />
-                <span>52 weeks contribution timeline</span>
+                <span>Original 52-week contribution timeline</span>
               </span>
 
               <div className="flex items-center gap-1.5 text-[10px]">
                 <span>Less</span>
-                <span className="w-2.5 h-2.5 rounded-[2px] bg-[#1E242E]" />
-                <span className="w-2.5 h-2.5 rounded-[2px] bg-emerald-900/60" />
-                <span className="w-2.5 h-2.5 rounded-[2px] bg-emerald-600" />
-                <span className="w-2.5 h-2.5 rounded-[2px] bg-emerald-300" />
+                <span className="w-2.5 h-2.5 rounded-[2px] bg-[#161B22]" title="0 contributions" />
+                <span className="w-2.5 h-2.5 rounded-[2px] bg-[#0e4429]" title="1-3 contributions" />
+                <span className="w-2.5 h-2.5 rounded-[2px] bg-[#006d32]" title="4-6 contributions" />
+                <span className="w-2.5 h-2.5 rounded-[2px] bg-[#26a641]" title="7-9 contributions" />
+                <span className="w-2.5 h-2.5 rounded-[2px] bg-[#39d353]" title="10+ contributions" />
                 <span>More</span>
               </div>
             </div>
@@ -121,27 +211,27 @@ export default function GithubActivity() {
 
           {/* Metrics Stack */}
           <div className="lg:col-span-4 space-y-4">
-            <div className="p-5 rounded-xl bg-[#0D1117] border border-[#252A33] flex items-center gap-4">
+            <div className="p-5 rounded-xl bg-[#0D1117] border border-[#252A33] flex items-center gap-4 hover:border-neutral-600 transition-colors">
               <div className="w-11 h-11 rounded-lg bg-[#161B22] border border-[#252A33] flex items-center justify-center shrink-0">
-                <GitHubIcon className="w-5 h-5 text-white" />
+                <GitHubIcon className="w-5 h-5 text-emerald-400" />
               </div>
               <div>
                 <div className="text-2xl font-bold font-mono text-white tracking-tight">
-                  {stats?.totalContributions ?? "487"}
+                  {totalContributions}
                 </div>
                 <div className="text-xs font-mono text-neutral-400">
-                  Annual Contributions
+                  Original Annual Commits
                 </div>
               </div>
             </div>
 
-            <div className="p-5 rounded-xl bg-[#0D1117] border border-[#252A33] flex items-center gap-4">
+            <div className="p-5 rounded-xl bg-[#0D1117] border border-[#252A33] flex items-center gap-4 hover:border-neutral-600 transition-colors">
               <div className="w-11 h-11 rounded-lg bg-[#161B22] border border-[#252A33] flex items-center justify-center shrink-0">
                 <BookOpen className="w-5 h-5 text-white" />
               </div>
               <div>
                 <div className="text-2xl font-bold font-mono text-white tracking-tight">
-                  {stats?.publicRepos ?? "12"}
+                  {stats?.publicRepos ?? 7}
                 </div>
                 <div className="text-xs font-mono text-neutral-400">
                   Public Repositories
@@ -149,16 +239,16 @@ export default function GithubActivity() {
               </div>
             </div>
 
-            <div className="p-5 rounded-xl bg-[#0D1117] border border-[#252A33] flex items-center gap-4">
+            <div className="p-5 rounded-xl bg-[#0D1117] border border-[#252A33] flex items-center gap-4 hover:border-neutral-600 transition-colors">
               <div className="w-11 h-11 rounded-lg bg-[#161B22] border border-[#252A33] flex items-center justify-center shrink-0">
-                <Users className="w-5 h-5 text-white" />
+                <Sparkles className="w-5 h-5 text-amber-400" />
               </div>
               <div>
                 <div className="text-2xl font-bold font-mono text-white tracking-tight">
-                  {stats?.followers ?? "36"}
+                  {activeDays}
                 </div>
                 <div className="text-xs font-mono text-neutral-400">
-                  Network Followers
+                  Active Commit Days (2026)
                 </div>
               </div>
             </div>
