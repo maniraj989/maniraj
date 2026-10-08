@@ -67,7 +67,7 @@ export default function Contact() {
 
   return (
     <section id="contact" className="py-28 md:py-36 bg-theme-bg border-b border-theme-border">
-      <div className="max-w-editorial mx-auto px-6 sm:px-8">
+      <div className="max-w-editorial mx-auto px-4 sm:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
           {/* Left Column */}
           <div className="lg:col-span-8">
@@ -75,7 +75,7 @@ export default function Contact() {
               08 // Contact
             </span>
 
-            <h2 className="font-editorial-serif text-[clamp(2.4rem,5vw,5rem)] font-normal tracking-tight text-theme-text leading-[1.02] mb-8">
+            <h2 className="font-editorial-serif text-[clamp(2.1rem,5vw,5rem)] font-normal tracking-tight text-theme-text leading-[1.02] mb-8">
               Have a software engineering opportunity, web application project, or product idea?
             </h2>
 
@@ -97,7 +97,7 @@ export default function Contact() {
 
             {/* Interactive Contact Form */}
             {showForm && (
-              <div className="p-8 rounded-xl bg-theme-surface border border-theme-border max-w-xl shadow-lg">
+              <div className="p-5 sm:p-8 rounded-xl bg-theme-surface border border-theme-border max-w-xl shadow-lg">
                 {isSent ? (
                   <div className="p-6 rounded-lg bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 flex items-center space-x-3">
                     <CheckCircle2 className="w-5 h-5 shrink-0" />

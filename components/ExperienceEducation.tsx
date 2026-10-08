@@ -5,13 +5,13 @@ import { educationData } from "@/data/education";
 export default function ExperienceEducation() {
   return (
     <section id="experience" className="py-24 md:py-32 bg-theme-bg border-b border-theme-border">
-      <div className="max-w-editorial mx-auto px-6 sm:px-8">
+      <div className="max-w-editorial mx-auto px-4 sm:px-8">
         {/* Section Header */}
         <div className="mb-16 pb-6 border-b border-theme-border">
           <span className="text-[11px] font-mono tracking-widest text-[var(--accent-color)] uppercase font-semibold block mb-2">
             04 // Journey &amp; Foundation
           </span>
-          <h2 className="font-editorial-serif text-[clamp(2.5rem,5.5vw,4.5rem)] font-normal tracking-tight text-theme-text leading-tight">
+          <h2 className="font-editorial-serif text-[clamp(2.1rem,5.5vw,4.5rem)] font-normal tracking-tight text-theme-text leading-tight">
             Experience &amp; Education
           </h2>
         </div>
@@ -27,12 +27,12 @@ export default function ExperienceEducation() {
               </span>
             </div>
 
-            <div className="relative border-l border-theme-border ml-3 pl-7 sm:pl-8 space-y-12">
+            <div className="relative border-l border-theme-border ml-2 sm:ml-3 pl-5 sm:pl-8 space-y-12">
               {experienceData.map((item, index) => (
                 <div key={item.id} className="relative group">
                   {/* Timeline Indicator Node */}
                   <span
-                    className={`absolute -left-[35px] sm:-left-[39px] top-2 w-2.5 h-2.5 rounded-sm border-2 border-theme-bg transition-transform duration-200 group-hover:scale-125 ${
+                    className={`absolute -left-[26px] sm:-left-[39px] top-2 w-2.5 h-2.5 rounded-sm border-2 border-theme-bg transition-transform duration-200 group-hover:scale-125 ${
                       item.current ? "bg-[var(--accent-color)]" : "bg-theme-muted"
                     }`}
                   />

@@ -48,7 +48,9 @@ export default function ProjectsSlider() {
 
   const scroll = (direction: "left" | "right") => {
     if (!scrollContainerRef.current) return;
-    const scrollAmount = direction === "left" ? -390 : 390;
+    const containerWidth = scrollContainerRef.current.clientWidth;
+    const step = Math.min(390, Math.max(260, containerWidth * 0.85));
+    const scrollAmount = direction === "left" ? -step : step;
     scrollContainerRef.current.scrollBy({ left: scrollAmount, behavior: "smooth" });
   };
 
@@ -83,14 +85,14 @@ export default function ProjectsSlider() {
 
   return (
     <section id="work" className="py-24 md:py-32 bg-theme-bg border-b border-theme-border">
-      <div className="max-w-editorial mx-auto px-6 sm:px-8">
+      <div className="max-w-editorial mx-auto px-4 sm:px-8">
         {/* Section Header with Slider Navigation Controls */}
         <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-12 pb-6 border-b border-theme-border">
           <div>
             <span className="text-[11px] font-mono tracking-widest text-[var(--accent-color)] uppercase font-semibold block mb-2">
               03 // Selected Work
             </span>
-            <h2 className="font-editorial-serif text-[clamp(2.5rem,5.5vw,4.5rem)] font-normal tracking-tight text-theme-text leading-tight">
+            <h2 className="font-editorial-serif text-[clamp(2.1rem,5.5vw,4.5rem)] font-normal tracking-tight text-theme-text leading-tight">
               Featured Projects
             </h2>
           </div>

@@ -275,7 +275,7 @@ export default function ReactFeature() {
 
   return (
     <section id="stack" className="py-24 md:py-32 bg-theme-bg border-b border-theme-border overflow-hidden">
-      <div className="max-w-editorial mx-auto px-6 sm:px-8">
+      <div className="max-w-editorial mx-auto px-4 sm:px-8">
         {/* Section Tag */}
         <div className="mb-6">
           <span className="text-[11px] font-mono tracking-widest text-[var(--accent-color)] uppercase font-semibold">
@@ -288,7 +288,7 @@ export default function ReactFeature() {
           <span className="text-xs font-mono tracking-[0.2em] uppercase text-theme-muted block mb-3">
             Primary Stack
           </span>
-          <h2 className="font-editorial-serif text-[clamp(2.5rem,5.5vw,5rem)] font-normal tracking-tight text-theme-text leading-[1.02]">
+          <h2 className="font-editorial-serif text-[clamp(2.1rem,5.5vw,5rem)] font-normal tracking-tight text-theme-text leading-[1.02]">
             Java. <br />
             DSA. <br />
             Full-Stack <br />
@@ -340,7 +340,7 @@ export default function ReactFeature() {
                   className="w-full md:w-[calc(50%-12px)] shrink-0 flex flex-col"
                 >
                   <div
-                    className="p-6 sm:p-8 rounded-xl border bg-theme-surface border-theme-border shadow-sm flex flex-col justify-between h-full transition-colors duration-150 hover:border-theme-borderStrong"
+                    className="p-5 sm:p-8 rounded-xl border bg-theme-surface border-theme-border shadow-sm flex flex-col justify-between h-full transition-colors duration-150 hover:border-theme-borderStrong"
                   >
                     <div>
                       {/* Top Bar with Icon & Category */}

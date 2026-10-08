@@ -48,16 +48,16 @@ export default function Navbar() {
           : "py-5 bg-transparent"
       }`}
     >
-      <div className="max-w-editorial mx-auto px-6 sm:px-8 flex items-center justify-between">
+      <div className="max-w-editorial mx-auto px-4 sm:px-8 flex items-center justify-between">
         {/* Left: Branding */}
         <Link
           href="/#hero"
-          className="group flex items-center space-x-2 focus:outline-none"
+          className="group flex items-center space-x-1.5 sm:space-x-2 focus:outline-none shrink-0"
         >
           <span className="font-mono text-xs tracking-wider text-theme-muted group-hover:text-theme-text transition-colors">
             [
           </span>
-          <span className="font-sans font-bold tracking-tight text-sm text-theme-text uppercase">
+          <span className="font-sans font-bold tracking-tight text-xs sm:text-sm text-theme-text uppercase">
             Maniraj Sharma
           </span>
           <span className="font-mono text-xs tracking-wider text-theme-muted group-hover:text-theme-text transition-colors">
@@ -66,7 +66,7 @@ export default function Navbar() {
         </Link>
 
         {/* Center: Desktop Navigation */}
-        <nav className="hidden md:flex items-center space-x-7" aria-label="Main Navigation">
+        <nav className="hidden lg:flex items-center space-x-6 xl:space-x-7" aria-label="Main Navigation">
           {navLinks.map((link) => {
             const sectionId = link.href.replace("/#", "").replace("#", "");
             const isActive = activeSection === sectionId;
@@ -104,8 +104,8 @@ export default function Navbar() {
           </a>
         </div>
 
-        {/* Mobile Hamburger Button */}
-        <div className="flex lg:hidden items-center space-x-3">
+        {/* Mobile / Tablet Hamburger & Theme Switcher */}
+        <div className="flex lg:hidden items-center space-x-2.5 sm:space-x-3">
           <ThemeSwitcher />
           <button
             type="button"
@@ -120,7 +120,7 @@ export default function Navbar() {
 
       {/* Mobile Slide Drawer */}
       {mobileMenuOpen && (
-        <div className="lg:hidden bg-theme-bg border-b border-theme-border px-6 py-6 space-y-4 shadow-lg">
+        <div className="lg:hidden bg-theme-bg border-b border-theme-border px-4 sm:px-6 py-6 space-y-4 shadow-lg">
           <nav className="flex flex-col space-y-3">
             {navLinks.map((link) => {
               const sectionId = link.href.replace("/#", "").replace("#", "");

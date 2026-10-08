@@ -27,7 +27,7 @@ export default function Hero() {
       id="hero"
       className="relative min-h-[90vh] flex items-center pt-28 pb-16 md:py-32 border-b border-theme-border overflow-hidden"
     >
-      <div className="max-w-editorial w-full mx-auto px-6 sm:px-8">
+      <div className="max-w-editorial w-full mx-auto px-4 sm:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
           {/* Left Column: Bold Typography & Clear Developer Intro */}
           <div className="lg:col-span-7 flex flex-col justify-center">
@@ -40,7 +40,7 @@ export default function Hero() {
             </div>
 
             {/* Display Headline */}
-            <h1 className="font-editorial-serif text-[clamp(3.8rem,8.5vw,8.5rem)] font-normal tracking-tight text-theme-text leading-[0.92] select-none">
+            <h1 className="font-editorial-serif text-[clamp(2.75rem,8.5vw,8.5rem)] font-normal tracking-tight text-theme-text leading-[0.92] select-none">
               Maniraj <br />
               <span className="italic">Sharma</span>
               <span className="text-[var(--accent-color)]">.</span>
@@ -48,7 +48,7 @@ export default function Hero() {
 
             {/* Role Eyebrow */}
             <div className="mt-6 mb-4">
-              <span className="text-xs font-mono font-semibold tracking-[0.22em] text-theme-muted uppercase">
+              <span className="text-xs font-mono font-semibold tracking-[0.2em] sm:tracking-[0.22em] text-theme-muted uppercase break-words">
                 FULL-STACK DEVELOPER · BACKEND &amp; SOFTWARE ENGINEERING FOCUS · INDIA
               </span>
             </div>

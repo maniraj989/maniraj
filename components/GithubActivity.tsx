@@ -102,7 +102,7 @@ export default function GithubActivity() {
 
   return (
     <section className="py-24 md:py-32 bg-[#06080B] text-white border-b border-[#252A33]">
-      <div className="max-w-editorial mx-auto px-6 sm:px-8">
+      <div className="max-w-editorial mx-auto px-4 sm:px-8">
         {/* Section Header */}
         <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-16 pb-6 border-b border-[#252A33]">
           <div>
@@ -113,7 +113,7 @@ export default function GithubActivity() {
                 GitHub Sync
               </span>
             </span>
-            <h2 className="font-editorial-serif text-[clamp(2.5rem,5.5vw,4.5rem)] font-normal tracking-tight text-white leading-tight">
+            <h2 className="font-editorial-serif text-[clamp(2.1rem,5.5vw,4.5rem)] font-normal tracking-tight text-white leading-tight">
               GitHub Activity
             </h2>
           </div>
@@ -206,7 +206,7 @@ export default function GithubActivity() {
           </div>
 
           {/* Metrics Stack */}
-          <div className="lg:col-span-4 space-y-4">
+          <div className="lg:col-span-4 grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-1 gap-4">
             <div className="p-5 rounded-xl bg-[#0D1117] border border-[#252A33] flex items-center gap-4 hover:border-neutral-600 transition-colors">
               <div className="w-11 h-11 rounded-lg bg-[#161B22] border border-[#252A33] flex items-center justify-center shrink-0">
                 <GitHubIcon className="w-5 h-5 text-emerald-400" />

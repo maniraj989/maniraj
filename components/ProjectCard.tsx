@@ -53,7 +53,7 @@ export default function ProjectCard({
       </div>
 
       {/* Content Area */}
-      <div className="p-6 flex flex-col flex-1 justify-between">
+      <div className="p-5 sm:p-6 flex flex-col flex-1 justify-between">
         <div>
           <div className="flex items-baseline justify-between mb-2">
             <span className="font-editorial-serif text-3xl font-normal text-theme-muted/40 group-hover:text-[var(--accent-color)] transition-colors select-none">

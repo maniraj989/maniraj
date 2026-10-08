@@ -165,13 +165,13 @@ function ToolSvg({ name }: { name: string }) {
 export default function ToolsGrid() {
   return (
     <section className="py-24 md:py-32 bg-theme-bg border-b border-theme-border">
-      <div className="max-w-editorial mx-auto px-6 sm:px-8">
+      <div className="max-w-editorial mx-auto px-4 sm:px-8">
         {/* Section Header */}
         <div className="mb-14">
           <span className="text-[11px] font-mono tracking-widest text-[var(--accent-color)] uppercase font-semibold block mb-2">
             05 // Stack &amp; Workflow
           </span>
-          <h2 className="font-editorial-serif text-[clamp(2.5rem,5.5vw,4.5rem)] font-normal tracking-tight text-theme-text leading-tight">
+          <h2 className="font-editorial-serif text-[clamp(2.1rem,5.5vw,4.5rem)] font-normal tracking-tight text-theme-text leading-tight">
             Tools of the Trade
           </h2>
         </div>

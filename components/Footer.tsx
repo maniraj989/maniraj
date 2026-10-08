@@ -21,8 +21,8 @@ function LinkedInIcon({ className }: { className?: string }) {
 export default function Footer() {
   return (
     <footer className="py-16 bg-theme-bg text-theme-text border-t border-theme-border">
-      <div className="max-w-editorial mx-auto px-6 sm:px-8">
-        <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-8 pb-12 border-b border-theme-border">
+      <div className="max-w-editorial mx-auto px-4 sm:px-8">
+        <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 lg:gap-8 pb-12 border-b border-theme-border">
           {/* Left */}
           <div>
             <div className="font-sans font-bold text-lg tracking-tight uppercase">

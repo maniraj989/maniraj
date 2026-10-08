@@ -3,19 +3,19 @@ import { editorialAchievements } from "@/data/achievements";
 export default function Achievements() {
   return (
     <section className="py-20 md:py-28 bg-theme-bg border-b border-theme-border">
-      <div className="max-w-editorial mx-auto px-6 sm:px-8">
+      <div className="max-w-editorial mx-auto px-4 sm:px-8">
         {/* Section Header */}
         <div className="mb-14">
           <span className="text-[11px] font-mono tracking-widest text-[var(--accent-color)] uppercase font-semibold block mb-2">
             07 // Highlights
           </span>
-          <h2 className="font-editorial-serif text-[clamp(2.2rem,5vw,4rem)] font-normal tracking-tight text-theme-text leading-tight">
+          <h2 className="font-editorial-serif text-[clamp(2.1rem,5vw,4rem)] font-normal tracking-tight text-theme-text leading-tight">
             Highlights
           </h2>
         </div>
 
         {/* Horizontal Editorial Numbered List */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 divide-y lg:divide-y-0 lg:divide-x divide-theme-border border-t border-b border-theme-border py-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 divide-y sm:divide-y-0 lg:divide-y-0 lg:divide-x divide-theme-border border-t border-b border-theme-border py-8">
           {editorialAchievements.map((item, idx) => (
             <div
               key={item.number}

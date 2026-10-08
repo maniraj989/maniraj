@@ -23,7 +23,7 @@ export const metadata: Metadata = {
 export default function ResumePage() {
   return (
     <div className="min-h-screen bg-theme-bg text-theme-text transition-colors duration-300 py-12 sm:py-16">
-      <div className="max-w-4xl mx-auto px-6 sm:px-8">
+      <div className="max-w-4xl mx-auto px-4 sm:px-8">
         {/* Navigation & Action Bar */}
         <div className="flex items-center justify-between pb-8 mb-10 border-b border-theme-border">
           <Link
@@ -45,13 +45,13 @@ export default function ResumePage() {
         </div>
 
         {/* Resume Content Sheet */}
-        <article className="p-8 sm:p-12 rounded-xl bg-theme-surface border border-theme-border shadow-sm">
+        <article className="p-5 sm:p-12 rounded-xl bg-theme-surface border border-theme-border shadow-sm">
           {/* Header */}
           <header className="border-b border-theme-border pb-8 mb-8">
             <span className="text-[11px] font-mono tracking-widest text-[var(--accent-color)] uppercase font-semibold block mb-2">
               Curriculum Vitae
             </span>
-            <h1 className="font-editorial-serif text-4xl sm:text-5xl font-normal tracking-tight text-theme-text leading-tight mb-2">
+            <h1 className="font-editorial-serif text-3xl sm:text-5xl font-normal tracking-tight text-theme-text leading-tight mb-2">
               Maniraj Sharma
             </h1>
             <p className="text-xs font-mono font-semibold tracking-widest uppercase text-theme-muted mb-5">
