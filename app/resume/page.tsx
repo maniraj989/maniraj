@@ -197,11 +197,6 @@ export default function ResumePage() {
                   <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 mb-1">
                     <h3 className="font-sans font-bold text-base text-theme-text">
                       {project.title}
-                      {project.category && (
-                        <span className="text-xs font-normal text-theme-muted font-mono ml-2">
-                          ({project.category})
-                        </span>
-                      )}
                     </h3>
                     <div className="flex items-center gap-3 text-xs font-mono">
                       <a
@@ -213,12 +208,14 @@ export default function ResumePage() {
                         <span>Demo</span>
                         <ExternalLink className="w-3 h-3" />
                       </a>
-                      <Link
-                        href={`/work/${project.id}`}
+                      <a
+                        href={project.githubUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="text-theme-muted hover:text-theme-text"
                       >
-                        Case Study
-                      </Link>
+                        GitHub
+                      </a>
                     </div>
                   </div>
                   <p className="text-xs sm:text-sm text-theme-muted mt-1 leading-relaxed">

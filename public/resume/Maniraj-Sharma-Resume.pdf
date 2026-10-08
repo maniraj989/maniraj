@@ -18,7 +18,7 @@ endobj
 << /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Oblique >>
 endobj
 7 0 obj
-<< /Length 6978 >>
+<< /Length 6932 >>
 stream
 BT /F2 20 Tf 0.05 0.05 0.05 rg 1 0 0 1 45 748 Tm (MANIRAJ SHARMA) Tj ET
 BT /F2 11 Tf 0.95 0.45 0.08 rg 1 0 0 1 45 732 Tm (FULL-STACK DEVELOPER  |  SOFTWARE ENGINEERING  |  INDIA) Tj ET
@@ -44,12 +44,12 @@ BT /F3 9 Tf 0.25 0.25 0.25 rg 1 0 0 1 45 556 Tm (Xavier International College, K
 BT /F2 8.5 Tf 0.15 0.5 0.3 rg 1 0 0 1 487 556 Tm (GPA: 3.16 / 4.0) Tj ET
 BT /F2 10 Tf 0.1 0.1 0.1 rg 1 0 0 1 45 541 Tm (WORK EXPERIENCE) Tj ET
 q 0.85 0.85 0.85 RG 0.5 w 45 538 m 567 538 l S Q
-BT /F2 9.5 Tf 0.05 0.05 0.05 rg 1 0 0 1 45 526 Tm (Founder & Full Stack Developer) Tj ET
+BT /F2 9.5 Tf 0.05 0.05 0.05 rg 1 0 0 1 45 526 Tm (Senior Full Stack Developer) Tj ET
 BT /F1 8.5 Tf 0.3 0.3 0.3 rg 1 0 0 1 487 526 Tm (Dec 2025 - Present) Tj ET
 BT /F3 9 Tf 0.25 0.25 0.25 rg 1 0 0 1 45 515 Tm (MM Digital Garage) Tj ET
-BT /F1 8.5 Tf 0.2 0.2 0.2 rg 1 0 0 1 53 504 Tm (- Designed and developed production web applications and business systems across frontend, backend, and deployment layers.) Tj ET
-BT /F1 8.5 Tf 0.2 0.2 0.2 rg 1 0 0 1 53 494 Tm (- Built scalable Next.js applications, engineered RESTful API endpoints, and structured database models for performance.) Tj ET
-BT /F2 8 Tf 0.35 0.45 0.55 rg 1 0 0 1 53 483 Tm (Technologies: Next.js - React - TypeScript - Node.js - MongoDB - PostgreSQL) Tj ET
+BT /F1 8.5 Tf 0.2 0.2 0.2 rg 1 0 0 1 53 504 Tm (- Building and maintaining full-stack web applications with scalable architecture and responsive interfaces.) Tj ET
+BT /F1 8.5 Tf 0.2 0.2 0.2 rg 1 0 0 1 53 494 Tm (- Engineering frontend components with Next.js, building backend logic, and structuring database models.) Tj ET
+BT /F2 8 Tf 0.35 0.45 0.55 rg 1 0 0 1 53 483 Tm (Technologies: React - JavaScript - Next.js - Node.js - MongoDB) Tj ET
 BT /F2 9.5 Tf 0.05 0.05 0.05 rg 1 0 0 1 45 470 Tm (Full Stack Developer) Tj ET
 BT /F1 8.5 Tf 0.3 0.3 0.3 rg 1 0 0 1 477 470 Tm (Sep 2024 - Nov 2025) Tj ET
 BT /F3 9 Tf 0.25 0.25 0.25 rg 1 0 0 1 45 459 Tm (Digital Cafe India) Tj ET
@@ -101,5 +101,5 @@ xref
 trailer
 << /Size 8 /Root 1 0 R >>
 startxref
-7514
+7468
 %%EOF

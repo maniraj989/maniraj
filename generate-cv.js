@@ -84,17 +84,17 @@ function buildResumePdf() {
   addLine(left, y, right, y, 0.85, 0.85, 0.85, 0.5);
   y -= 12;
 
-  // Role 1: Founder & Full Stack Developer
-  addText('F2', 9.5, left, y, 'Founder & Full Stack Developer', 0.05, 0.05, 0.05);
+  // Role 1: Senior Full Stack Developer
+  addText('F2', 9.5, left, y, 'Senior Full Stack Developer', 0.05, 0.05, 0.05);
   addText('F1', 8.5, right - 80, y, 'Dec 2025 - Present', 0.3, 0.3, 0.3);
   y -= 11;
   addText('F3', 9, left, y, 'MM Digital Garage', 0.25, 0.25, 0.25);
   y -= 11;
-  addText('F1', 8.5, left + 8, y, '- Designed and developed production web applications and business systems across frontend, backend, and deployment layers.', 0.2, 0.2, 0.2);
+  addText('F1', 8.5, left + 8, y, '- Building and maintaining full-stack web applications with scalable architecture and responsive interfaces.', 0.2, 0.2, 0.2);
   y -= 10;
-  addText('F1', 8.5, left + 8, y, '- Built scalable Next.js applications, engineered RESTful API endpoints, and structured database models for performance.', 0.2, 0.2, 0.2);
+  addText('F1', 8.5, left + 8, y, '- Engineering frontend components with Next.js, building backend logic, and structuring database models.', 0.2, 0.2, 0.2);
   y -= 11;
-  addText('F2', 8, left + 8, y, 'Technologies: Next.js - React - TypeScript - Node.js - MongoDB - PostgreSQL', 0.35, 0.45, 0.55);
+  addText('F2', 8, left + 8, y, 'Technologies: React - JavaScript - Next.js - Node.js - MongoDB', 0.35, 0.45, 0.55);
   y -= 13;
 
   // Role 2: Full Stack Developer

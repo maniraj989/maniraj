@@ -21,13 +21,13 @@ export default function About() {
 
             <div className="space-y-4 text-theme-muted text-base sm:text-lg font-normal leading-relaxed max-w-2xl">
               <p>
-                I am a 2nd-year Computer Science Engineering student at SRM IST and a full-stack developer with a backend/software engineering focus, building practical web applications, business systems, and digital products.
+                I am a B.Tech Computer Science &amp; Engineering student at SRM IST and a full-stack developer building practical web applications and business systems.
               </p>
               <p>
-                My work spans across responsive frontend interfaces, backend APIs, relational and document databases, and production deployments. I am drawn to solid software engineering principles, clean application architecture, and reliable performance.
+                My current development journey combines full-stack web development, Java, Data Structures &amp; Algorithms, database design, backend engineering, and software engineering fundamentals.
               </p>
               <p className="text-sm font-mono text-theme-muted/80">
-                Currently strengthening my foundations in Data Structures &amp; Algorithms, Java, Spring Boot, database design, and system architecture.
+                Focused on writing clean code, understanding core CS fundamentals, and building reliable, scalable software solutions.
               </p>
             </div>
           </div>
@@ -50,7 +50,7 @@ export default function About() {
                 FULL-STACK
               </span>
               <span className="text-xs font-mono tracking-wider uppercase text-theme-muted mt-1 block">
-                Backend / SE Focus
+                Software Engineering Journey
               </span>
             </div>
 
@@ -60,7 +60,7 @@ export default function About() {
                 AVAILABLE
               </span>
               <span className="text-xs font-mono tracking-wider uppercase text-theme-muted mt-1 block">
-                Open to Opportunities
+                Internships &amp; Opportunities
               </span>
             </div>
           </div>
