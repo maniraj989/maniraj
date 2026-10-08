@@ -1,6 +1,7 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef, useEffect, useCallback } from "react";
+import { ArrowLeft, ArrowRight } from "lucide-react";
 
 function CategoryIcon({ type }: { type: string }) {
   switch (type) {
@@ -35,20 +36,6 @@ function CategoryIcon({ type }: { type: string }) {
           <path d="M16 2.5L2.8 10.1v11.8L16 29.5l13.2-7.6V10.1L16 2.5zm10.7 17.8L16 26.5 5.3 20.3V11.7L16 5.5l10.7 6.2v8.6z" />
         </svg>
       );
-    case "database":
-      return (
-        <svg className="w-6 h-6 text-[#4169E1]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-          <ellipse cx="12" cy="5" rx="9" ry="3" />
-          <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3" />
-          <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5" />
-        </svg>
-      );
-    case "tools":
-      return (
-        <svg className="w-6 h-6 text-[#2496ED]" viewBox="0 0 24 24" fill="currentColor">
-          <path d="M13.983 11.078h2.119a.186.186 0 00.186-.185V9.006a.186.186 0 00-.186-.186h-2.119a.185.185 0 00-.185.186v1.887c0 .102.083.185.185.185m-2.954-5.43h2.118a.186.186 0 00.186-.186V3.574a.186.186 0 00-.186-.185h-2.118a.185.185 0 00-.185.185v1.888c0 .102.082.185.185.185m0 2.716h2.118a.187.187 0 00.186-.186V6.29a.186.186 0 00-.186-.185h-2.118a.185.185 0 00-.185.185v1.887c0 .102.082.186.185.186m-2.93 0h2.12a.186.186 0 00.184-.186V6.29a.185.185 0 00-.185-.185H8.1a.185.185 0 00-.185.185v1.887c0 .102.083.186.185.186m-2.964 0h2.119a.186.186 0 00.185-.186V6.29a.185.185 0 00-.185-.185H5.136a.186.186 0 00-.186.185v1.887c0 .102.084.186.186.186m5.893 2.714h2.119a.186.186 0 00.186-.185V9.006a.186.186 0 00-.186-.186h-2.119a.185.185 0 00-.185.186v1.887c0 .102.082.185.185.185m-2.93 0h2.12a.185.185 0 00.184-.185V9.006a.185.185 0 00-.184-.186h-2.12a.185.185 0 00-.184.186v1.887c0 .102.083.185.185.185m-2.964 0h2.119a.185.185 0 00.185-.185V9.006a.185.185 0 00-.185-.186H5.136a.186.186 0 00-.186.186v1.887c0 .102.084.186.186.185m-2.928 0h2.119a.185.185 0 00.185-.185V9.006a.185.185 0 00-.185-.186H2.208a.186.186 0 00-.186.186v1.887c0 .102.084.185.186.185m21.71 1.954c-.347-.207-.942-.315-1.574-.09-.168.06-.328.143-.474.248-.44-.316-.94-.482-1.464-.482h-1.042c-.22 0-.414.135-.494.343l-.47 1.222a.49.49 0 01-.46.312H.498a.5.5 0 00-.498.513c.094 2.87 1.157 5.488 3.09 7.421 2.227 2.228 5.253 3.473 8.442 3.473 7.828 0 12.44-5.328 12.44-11.458 0-.46-.037-.915-.1-1.36-.015-.098-.05-.192-.1-.274-.216-.36-.612-.668-1.285-.928" />
-        </svg>
-      );
     default:
       return null;
   }
@@ -66,7 +53,7 @@ interface StackCategory {
 }
 
 const stackCategories: StackCategory[] = [
-  // 1. Java
+  // 01 // CORE PROGRAMMING
   {
     id: "java",
     iconType: "java",
@@ -89,7 +76,7 @@ const stackCategories: StackCategory[] = [
     ],
   },
 
-  // 2. Data Structures & Algorithms
+  // 02 // PROBLEM SOLVING
   {
     id: "dsa",
     iconType: "dsa",
@@ -112,7 +99,7 @@ const stackCategories: StackCategory[] = [
     ],
   },
 
-  // 3. JavaScript / TypeScript & React / Next.js
+  // 03 // FRONTEND & FULL-STACK
   {
     id: "frontend",
     iconType: "frontend",
@@ -132,7 +119,7 @@ const stackCategories: StackCategory[] = [
     ],
   },
 
-  // 4. Node.js / Express.js
+  // 04 // BACKEND DEVELOPMENT
   {
     id: "backend",
     iconType: "backend",
@@ -152,53 +139,142 @@ const stackCategories: StackCategory[] = [
       "});",
     ],
   },
-
-  // 5. PostgreSQL / Supabase & MongoDB
-  {
-    id: "database",
-    iconType: "database",
-    category: "05 // DATABASES & SERVICES",
-    title: "PostgreSQL & Supabase",
-    description: "Relational database design and backend services",
-    bullets: [
-      "PostgreSQL database design and relational modeling",
-      "Supabase backend services, database and Auth integration",
-      "MongoDB for NoSQL application data in real projects",
-      "Structured SQL queries, tables and data integrity",
-    ],
-    snippetTag: "// Relational Schema & Queries",
-    snippet: [
-      "SELECT users.id, profiles.role FROM users",
-      "JOIN profiles ON users.id = profiles.user_id;",
-    ],
-  },
-
-  // 6. Git / GitHub & Docker
-  {
-    id: "tools",
-    iconType: "tools",
-    category: "06 // DEVELOPMENT TOOLS",
-    title: "Git, GitHub & Docker",
-    description: "Version control, collaboration and deployment fundamentals",
-    bullets: [
-      "Git version control and branching workflows",
-      "GitHub repositories and collaborative code reviews",
-      "Docker fundamentals and containerized environments",
-      "Production deployment workflows with Vercel",
-    ],
-    snippetTag: "// Collaborative Workflow",
-    snippet: [
-      "git checkout -b feature/system-pipeline",
-      "docker compose up --build -d",
-    ],
-  },
 ];
 
 export default function ReactFeature() {
-  const [activePanel, setActivePanel] = useState<string>("java");
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [dragOffset, setDragOffset] = useState(0);
+  const [isDragging, setIsDragging] = useState(false);
+  const [isMultiCard, setIsMultiCard] = useState(false);
+  const [slideOffsets, setSlideOffsets] = useState<number[]>([]);
+
+  const dragStartX = useRef<number | null>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
+  const slideRefs = useRef<(HTMLDivElement | null)[]>([]);
+
+  // On desktop / tablet (>= 768px), exactly 2 cards are visible. Max index is total - 2.
+  // On mobile (< 768px), exactly 1 card is visible. Max index is total - 1.
+  const maxIndex = isMultiCard
+    ? Math.max(0, stackCategories.length - 2)
+    : stackCategories.length - 1;
+
+  // Calculate pixel offsets for each slide relative to track
+  const calculateOffsets = useCallback(() => {
+    const isMulti = window.innerWidth >= 768;
+    setIsMultiCard(isMulti);
+    const offsets = slideRefs.current.map((el) => (el ? el.offsetLeft : 0));
+    setSlideOffsets(offsets);
+  }, []);
+
+  useEffect(() => {
+    calculateOffsets();
+    window.addEventListener("resize", calculateOffsets);
+    return () => window.removeEventListener("resize", calculateOffsets);
+  }, [calculateOffsets]);
+
+  // Keep index within bounds on resize
+  useEffect(() => {
+    if (currentIndex > maxIndex) {
+      setCurrentIndex(maxIndex);
+    }
+  }, [maxIndex, currentIndex]);
+
+  const handlePrev = useCallback(() => {
+    setCurrentIndex((prev) => Math.max(0, prev - 1));
+  }, []);
+
+  const handleNext = useCallback(() => {
+    setCurrentIndex((prev) => Math.min(maxIndex, prev + 1));
+  }, [maxIndex]);
+
+  // Keyboard navigation
+  const handleKeyDown = (e: React.KeyboardEvent) => {
+    if (e.key === "ArrowLeft") {
+      e.preventDefault();
+      handlePrev();
+    } else if (e.key === "ArrowRight") {
+      e.preventDefault();
+      handleNext();
+    }
+  };
+
+  // Touch Swipe Handlers (Mobile)
+  const handleTouchStart = (e: React.TouchEvent) => {
+    dragStartX.current = e.touches[0].clientX;
+    setIsDragging(true);
+    setDragOffset(0);
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    if (dragStartX.current === null) return;
+    const diff = e.touches[0].clientX - dragStartX.current;
+    // Add dampening at the boundaries
+    if (
+      (currentIndex === 0 && diff > 0) ||
+      (currentIndex >= maxIndex && diff < 0)
+    ) {
+      setDragOffset(diff * 0.25);
+    } else {
+      setDragOffset(diff);
+    }
+  };
+
+  const handleTouchEnd = () => {
+    if (dragStartX.current === null) return;
+    if (dragOffset < -45 && currentIndex < maxIndex) {
+      handleNext();
+    } else if (dragOffset > 45 && currentIndex > 0) {
+      handlePrev();
+    }
+    dragStartX.current = null;
+    setIsDragging(false);
+    setDragOffset(0);
+  };
+
+  // Mouse Drag Handlers (Desktop)
+  const handleMouseDown = (e: React.MouseEvent) => {
+    if (e.button !== 0) return;
+    dragStartX.current = e.clientX;
+    setIsDragging(true);
+    setDragOffset(0);
+  };
+
+  const handleMouseMove = (e: React.MouseEvent) => {
+    if (dragStartX.current === null || !isDragging) return;
+    const diff = e.clientX - dragStartX.current;
+    if (
+      (currentIndex === 0 && diff > 0) ||
+      (currentIndex >= maxIndex && diff < 0)
+    ) {
+      setDragOffset(diff * 0.25);
+    } else {
+      setDragOffset(diff);
+    }
+  };
+
+  const handleMouseUpOrLeave = () => {
+    if (dragStartX.current === null || !isDragging) return;
+    if (dragOffset < -55 && currentIndex < maxIndex) {
+      handleNext();
+    } else if (dragOffset > 55 && currentIndex > 0) {
+      handlePrev();
+    }
+    dragStartX.current = null;
+    setIsDragging(false);
+    setDragOffset(0);
+  };
+
+  // Compute final track translate
+  const baseOffset = slideOffsets[currentIndex] || 0;
+  const currentTranslate = -(baseOffset - dragOffset);
+
+  // Compute progress percentage
+  const progressPercent = isMultiCard
+    ? ((currentIndex + 2) / stackCategories.length) * 100
+    : ((currentIndex + 1) / stackCategories.length) * 100;
 
   return (
-    <section id="stack" className="py-24 md:py-32 bg-theme-bg border-b border-theme-border">
+    <section id="stack" className="py-24 md:py-32 bg-theme-bg border-b border-theme-border overflow-hidden">
       <div className="max-w-editorial mx-auto px-6 sm:px-8">
         {/* Section Tag */}
         <div className="mb-6">
@@ -223,62 +299,139 @@ export default function ReactFeature() {
           </p>
         </div>
 
-        {/* Interactive Technical Panels: 6 Stack Categories */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          {stackCategories.map((item) => {
-            const isActive = activePanel === item.id;
-            return (
-              <div
-                key={item.id}
-                onMouseEnter={() => setActivePanel(item.id)}
-                className={`p-8 sm:p-10 rounded-xl border transition-all duration-200 flex flex-col justify-between ${
-                  isActive
-                    ? "bg-theme-surface border-theme-borderStrong shadow-md"
-                    : "bg-theme-surface/60 border-theme-border hover:border-theme-borderStrong"
-                }`}
-              >
-                <div>
-                  {/* Top Bar with Icon & Category */}
-                  <div className="flex items-center justify-between mb-8">
-                    <div className="w-11 h-11 rounded-lg bg-theme-elevated border border-theme-border flex items-center justify-center">
-                      <CategoryIcon type={item.iconType} />
+        {/* Carousel Container */}
+        <div
+          ref={containerRef}
+          onKeyDown={handleKeyDown}
+          tabIndex={0}
+          role="region"
+          aria-roledescription="carousel"
+          aria-label="Technical Stack Carousel"
+          className="relative focus-visible:outline-hidden focus-visible:ring-1 focus-visible:ring-[var(--accent-color)] rounded-xl select-none"
+        >
+          {/* Overflow Viewport */}
+          <div
+            className={`overflow-hidden py-2 ${isDragging ? "cursor-grabbing" : "cursor-grab"}`}
+            onMouseDown={handleMouseDown}
+            onMouseMove={handleMouseMove}
+            onMouseUp={handleMouseUpOrLeave}
+            onMouseLeave={handleMouseUpOrLeave}
+            onTouchStart={handleTouchStart}
+            onTouchMove={handleTouchMove}
+            onTouchEnd={handleTouchEnd}
+          >
+            {/* Sliding Track with 24px (gap-6) spacing */}
+            <div
+              className="flex gap-6 will-change-transform motion-reduce:transition-none"
+              style={{
+                transform: `translateX(${currentTranslate}px)`,
+                transition: isDragging ? "none" : "transform 360ms cubic-bezier(0.16, 1, 0.3, 1)",
+              }}
+            >
+              {stackCategories.map((item, index) => (
+                <div
+                  key={item.id}
+                  ref={(el) => {
+                    slideRefs.current[index] = el;
+                  }}
+                  role="group"
+                  aria-roledescription="slide"
+                  aria-label={`${item.category}: ${item.title} (${index + 1} of ${stackCategories.length})`}
+                  className="w-full md:w-[calc(50%-12px)] shrink-0 flex flex-col"
+                >
+                  <div
+                    className="p-6 sm:p-8 rounded-xl border bg-theme-surface border-theme-border shadow-sm flex flex-col justify-between h-full transition-colors duration-150 hover:border-theme-borderStrong"
+                  >
+                    <div>
+                      {/* Top Bar with Icon & Category */}
+                      <div className="flex items-center justify-between mb-6">
+                        <div className="w-10 h-10 rounded-lg bg-theme-elevated border border-theme-border flex items-center justify-center">
+                          <CategoryIcon type={item.iconType} />
+                        </div>
+
+                        <span className="font-mono text-xs text-theme-muted uppercase tracking-wider">
+                          {item.category}
+                        </span>
+                      </div>
+
+                      <h3 className="font-sans font-bold text-xl sm:text-2xl text-theme-text mb-2 tracking-tight">
+                        {item.title}
+                      </h3>
+
+                      <p className="text-xs sm:text-sm font-mono text-[var(--accent-color)] mb-5 font-medium">
+                        &quot;{item.description}&quot;
+                      </p>
+
+                      <ul className="space-y-2.5 font-mono text-xs sm:text-[13px] text-theme-muted mb-6">
+                        {item.bullets.map((bullet) => (
+                          <li key={bullet} className="flex items-center gap-2.5">
+                            <span className="w-1.5 h-1.5 rounded-sm bg-[var(--accent-color)] shrink-0" />
+                            <span>{bullet}</span>
+                          </li>
+                        ))}
+                      </ul>
                     </div>
 
-                    <span className="font-mono text-xs text-theme-muted uppercase tracking-wider">
-                      {item.category}
-                    </span>
+                    {/* Code Snippet / Context Box */}
+                    <div className="p-3.5 sm:p-4 rounded-md bg-theme-elevated border border-theme-border font-mono text-[11px] leading-relaxed text-theme-muted overflow-x-auto">
+                      <div className="text-[var(--accent-color)] font-semibold mb-1">
+                        {item.snippetTag}
+                      </div>
+                      {item.snippet.map((line, idx) => (
+                        <div key={idx}>{line}</div>
+                      ))}
+                    </div>
                   </div>
-
-                  <h3 className="font-sans font-bold text-2xl text-theme-text mb-2 tracking-tight">
-                    {item.title}
-                  </h3>
-
-                  <p className="text-xs font-mono text-[var(--accent-color)] mb-6 font-medium">
-                    &quot;{item.description}&quot;
-                  </p>
-
-                  <ul className="space-y-3 font-mono text-xs sm:text-sm text-theme-muted mb-8">
-                    {item.bullets.map((bullet) => (
-                      <li key={bullet} className="flex items-center gap-2.5">
-                        <span className="w-1.5 h-1.5 rounded-sm bg-[var(--accent-color)] shrink-0" />
-                        <span>{bullet}</span>
-                      </li>
-                    ))}
-                  </ul>
                 </div>
+              ))}
+            </div>
+          </div>
 
-                {/* Code Snippet / Context Box */}
-                <div className="p-4 rounded-md bg-theme-elevated border border-theme-border font-mono text-[11px] leading-relaxed text-theme-muted overflow-x-auto">
-                  <div className="text-[var(--accent-color)] font-semibold mb-1">
-                    {item.snippetTag}
-                  </div>
-                  {item.snippet.map((line, idx) => (
-                    <div key={idx}>{line}</div>
-                  ))}
-                </div>
+          {/* Carousel Editorial Controls & Indicator (Underneath Cards) */}
+          <div className="mt-10 flex flex-col items-center gap-4">
+            {/* Arrows & Slide Counter */}
+            <div className="flex items-center gap-6">
+              <button
+                type="button"
+                onClick={handlePrev}
+                disabled={currentIndex === 0}
+                className="p-2 sm:px-3.5 sm:py-2 rounded-md text-xs font-mono border border-theme-border bg-theme-surface text-theme-text hover:border-theme-borderStrong transition-all duration-150 disabled:opacity-30 disabled:cursor-not-allowed focus-visible:outline-hidden focus-visible:ring-1 focus-visible:ring-[var(--accent-color)]"
+                aria-label="Previous card"
+              >
+                <ArrowLeft className="w-4 h-4" />
+              </button>
+
+              <div className="font-mono text-xs sm:text-sm tracking-widest text-theme-muted select-none">
+                <span className="text-theme-text font-bold">
+                  {isMultiCard
+                    ? `0${currentIndex + 1}–0${currentIndex + 2}`
+                    : `0${currentIndex + 1}`}
+                </span>
+                <span className="mx-1.5 text-theme-muted/50">/</span>
+                <span>0{stackCategories.length}</span>
               </div>
-            );
-          })}
+
+              <button
+                type="button"
+                onClick={handleNext}
+                disabled={currentIndex >= maxIndex}
+                className="p-2 sm:px-3.5 sm:py-2 rounded-md text-xs font-mono border border-theme-border bg-theme-surface text-theme-text hover:border-theme-borderStrong transition-all duration-150 disabled:opacity-30 disabled:cursor-not-allowed focus-visible:outline-hidden focus-visible:ring-1 focus-visible:ring-[var(--accent-color)]"
+                aria-label="Next card"
+              >
+                <ArrowRight className="w-4 h-4" />
+              </button>
+            </div>
+
+            {/* Subtle Progress Bar */}
+            <div className="w-full max-w-[220px] sm:max-w-[260px] h-0.5 bg-theme-border rounded-full overflow-hidden">
+              <div
+                className="h-full bg-[var(--accent-color)] transition-all duration-300 ease-out"
+                style={{
+                  width: `${progressPercent}%`,
+                }}
+              />
+            </div>
+          </div>
         </div>
       </div>
     </section>
