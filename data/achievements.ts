@@ -8,26 +8,26 @@ export interface EditorialAchievement {
 export const editorialAchievements: EditorialAchievement[] = [
   {
     number: "01",
-    title: "Dean's List",
-    context: "Academic Excellence & Top Percentile Recognition",
-    year: "2023",
+    title: "Academic Standing",
+    context: "B.Tech Computer Science with CGPA 8.7 at SRM IST",
+    year: "2025 - 2028",
   },
   {
     number: "02",
-    title: "Certifications",
-    context: "Advanced Full-Stack Systems & Enterprise Architecture",
-    year: "2024",
+    title: "Live Deployments",
+    context: "Built & launched web applications for e-learning, inventory, agency, and restaurant",
+    year: "Production",
   },
   {
     number: "03",
-    title: "Selected Projects",
-    context: "Production-ready Web Applications & Distributed APIs",
-    year: "2025",
+    title: "Full-Stack Engineering",
+    context: "Engineered responsive client interfaces, REST endpoints, and database models",
+    year: "Ongoing",
   },
   {
     number: "04",
-    title: "Open Source",
-    context: "Active modern JavaScript & UI Component Ecosystem",
+    title: "Open Source Activity",
+    context: "Active development workflows and public code repositories on GitHub",
     year: "Active",
   },
 ];

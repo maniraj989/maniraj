@@ -11,20 +11,20 @@ export default function About() {
 
         {/* Large Typographic Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
-          {/* Left Column: Bold Headline & Philosophy */}
+          {/* Left Column: Headline & Overview */}
           <div className="lg:col-span-8">
             <h2 className="font-editorial-serif text-[clamp(2.6rem,5.5vw,5.5rem)] font-normal text-theme-text leading-[1.02] tracking-tight mb-8">
-              I BUILD <br />
-              <span className="italic text-[var(--accent-color)]">DIGITAL PRODUCTS</span> <br />
-              FOR THE MODERN WEB.
+              BUILDING <br />
+              <span className="italic text-[var(--accent-color)]">WEB APPLICATIONS</span> <br />
+              WITH SOLID ARCHITECTURE.
             </h2>
 
             <p className="text-theme-muted text-lg sm:text-xl font-normal leading-relaxed max-w-2xl">
-              Full-stack developer focused on creating fast, accessible and scalable web experiences with clean architecture and exceptional user interfaces.
+              Full-stack developer building practical web applications, business management platforms, and performant user interfaces with clean architecture and reliable engineering.
             </p>
           </div>
 
-          {/* Right Column: Editorial Typographic Metadata Grid */}
+          {/* Right Column: Key Details */}
           <div className="lg:col-span-4 flex flex-col divide-y divide-theme-border border-t lg:border-t-0 border-b lg:border-b-0 border-theme-border">
             {/* Meta 1 */}
             <div className="py-6">
@@ -32,7 +32,7 @@ export default function About() {
                 INDIA
               </span>
               <span className="text-xs font-mono tracking-wider uppercase text-theme-muted mt-1 block">
-                Based in
+                Location
               </span>
             </div>
 
@@ -42,17 +42,17 @@ export default function About() {
                 FULL-STACK
               </span>
               <span className="text-xs font-mono tracking-wider uppercase text-theme-muted mt-1 block">
-                Specialization
+                Primary Focus
               </span>
             </div>
 
             {/* Meta 3 */}
             <div className="py-6">
               <span className="block text-2xl sm:text-3xl font-sans font-bold tracking-tight text-[var(--accent-color)]">
-                OPEN TO
+                AVAILABLE
               </span>
               <span className="text-xs font-mono tracking-wider uppercase text-theme-muted mt-1 block">
-                Selected Opportunities
+                Open to Opportunities
               </span>
             </div>
           </div>

@@ -80,7 +80,7 @@ export async function POST(request: Request) {
     // 5. Initialize Resend client
     const resend = new Resend(apiKey);
 
-    const emailSubject = `New Portfolio Contact — ${cleanName}`;
+    const emailSubject = `New Portfolio Contact: ${cleanName}`;
     const textContent = `Name:\n${cleanName}\n\nEmail:\n${cleanEmail}\n\nProject Brief / Message:\n${cleanMessage}`;
     const htmlContent = `
       <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 28px; color: #111827; background-color: #ffffff; border: 1px solid #e5e7eb; border-radius: 8px;">

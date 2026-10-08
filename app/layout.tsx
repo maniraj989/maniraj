@@ -1,7 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import { ThemeProvider } from "@/components/ThemeContext";
-import CustomCursor from "@/components/CustomCursor";
 import ScrollProgress from "@/components/ScrollProgress";
 
 export const viewport: Viewport = {
@@ -14,28 +13,31 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   title: "Maniraj Sharma | Full-Stack Web Developer",
   description:
-    "Full-stack web developer and creative engineer based in India, building scalable web applications and thoughtful digital products.",
+    "Maniraj Sharma (manirajsharma, maniraj sharma). Full-stack web developer building production web applications, inventory management systems, e-learning platforms, and digital experiences with React, Next.js, and Node.js.",
   keywords: [
     "Maniraj Sharma",
+    "manirajsharma",
+    "maniraj sharma",
     "Full-Stack Web Developer",
-    "Frontend Engineer",
-    "React",
+    "Frontend Developer",
+    "Software Engineer",
+    "React Developer",
+    "Next.js Developer",
     "JavaScript",
-    "Next.js",
+    "TypeScript",
     "Node.js",
-    "India Web Developer",
   ],
-  authors: [{ name: "Maniraj Sharma", url: "https://manirajsharma.dev" }],
+  authors: [{ name: "Maniraj Sharma", url: "https://manirajsharma.com.np" }],
   creator: "Maniraj Sharma",
-  metadataBase: new URL("https://manirajsharma.dev"),
+  metadataBase: new URL("https://manirajsharma.com.np"),
   alternates: {
     canonical: "/",
   },
   openGraph: {
     title: "Maniraj Sharma | Full-Stack Web Developer",
     description:
-      "Full-stack web developer and creative engineer building scalable web applications and interfaces.",
-    url: "https://manirajsharma.dev",
+      "Maniraj Sharma (manirajsharma, maniraj sharma). Full-stack web developer building production web applications, inventory management systems, and e-learning platforms.",
+    url: "https://manirajsharma.com.np",
     siteName: "Maniraj Sharma",
     locale: "en_US",
     type: "website",
@@ -44,8 +46,8 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Maniraj Sharma | Full-Stack Web Developer",
     description:
-      "Full-stack web developer and creative engineer building scalable web applications and interfaces.",
-    creator: "@manirajsharma",
+      "Maniraj Sharma (manirajsharma, maniraj sharma). Full-stack web developer building production web applications, inventory systems, and modern web platforms.",
+    creator: "@maniraj989",
   },
 };
 
@@ -58,8 +60,9 @@ export default function RootLayout({
     "@context": "https://schema.org",
     "@type": "Person",
     name: "Maniraj Sharma",
+    alternateName: ["manirajsharma", "maniraj sharma"],
     jobTitle: "Full-Stack Web Developer",
-    url: "https://manirajsharma.dev",
+    url: "https://manirajsharma.com.np",
     sameAs: [
       "https://github.com/maniraj989",
       "https://www.linkedin.com/in/maniraj-sharmma-221b69355/",
@@ -73,6 +76,7 @@ export default function RootLayout({
       "Tailwind CSS",
       "MongoDB",
       "Express.js",
+      "PostgreSQL",
     ],
   };
 
@@ -87,7 +91,6 @@ export default function RootLayout({
       <body className="antialiased min-h-screen bg-theme-bg text-theme-text transition-colors duration-300">
         <ThemeProvider>
           <ScrollProgress />
-          <CustomCursor />
           {children}
         </ThemeProvider>
       </body>

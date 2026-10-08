@@ -13,7 +13,7 @@ export default function Experience() {
         {experienceData.map((item, index) => (
           <div key={item.id} className="relative">
             <span
-              className={`absolute -left-[30px] top-1.5 w-3 h-3 rounded-full border-2 border-theme-bg ${
+              className={`absolute -left-[30px] top-1.5 w-3 h-3 rounded-sm border-2 border-theme-bg ${
                 item.current ? "bg-[var(--accent-color)]" : "bg-theme-muted"
               }`}
             />

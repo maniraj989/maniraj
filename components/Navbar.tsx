@@ -42,9 +42,9 @@ export default function Navbar() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-250 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-200 ${
         scrolled
-          ? "py-3 bg-theme-bg/85 backdrop-blur-md border-b border-theme-border shadow-xs"
+          ? "py-3 bg-theme-bg/90 backdrop-blur-md border-b border-theme-border shadow-xs"
           : "py-5 bg-transparent"
       }`}
     >
@@ -82,21 +82,21 @@ export default function Navbar() {
               >
                 {link.name}
                 {isActive && (
-                  <span className="absolute -bottom-1 left-0 right-0 h-[1.5px] bg-[var(--accent-color)] rounded-full" />
+                  <span className="absolute -bottom-1 left-0 right-0 h-[1.5px] bg-[var(--accent-color)]" />
                 )}
               </a>
             );
           })}
         </nav>
 
-        {/* Right: Theme Switcher & Download CV */}
-        <div className="hidden lg:flex items-center space-x-5">
+        {/* Right: Theme Switcher & CV Button */}
+        <div className="hidden lg:flex items-center space-x-4">
           <ThemeSwitcher />
 
           <a
             href="/resume/maniraj-sharma-cv.pdf"
             download="Maniraj_Sharma_CV.pdf"
-            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-medium text-theme-text border border-theme-border hover:border-theme-borderStrong hover:bg-theme-surface transition-all duration-150"
+            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md text-xs font-medium text-theme-text border border-theme-border hover:border-theme-borderStrong hover:bg-theme-surface transition-all duration-150"
           >
             <span>CV</span>
             <Download className="w-3.5 h-3.5 text-[var(--accent-color)]" />
@@ -109,7 +109,7 @@ export default function Navbar() {
           <button
             type="button"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="p-1.5 rounded text-theme-text hover:bg-theme-surface border border-theme-border transition-colors"
+            className="p-1.5 rounded-md text-theme-text hover:bg-theme-surface border border-theme-border transition-colors"
             aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
           >
             {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
@@ -119,7 +119,7 @@ export default function Navbar() {
 
       {/* Mobile Slide Drawer */}
       {mobileMenuOpen && (
-        <div className="lg:hidden bg-theme-bg border-b border-theme-border px-6 py-6 space-y-4 shadow-lg animate-in slide-in-from-top-2 duration-200">
+        <div className="lg:hidden bg-theme-bg border-b border-theme-border px-6 py-6 space-y-4 shadow-lg">
           <nav className="flex flex-col space-y-3">
             {navLinks.map((link) => {
               const sectionId = link.href.replace("#", "");
@@ -134,7 +134,7 @@ export default function Navbar() {
                   }`}
                 >
                   <span>{link.name}</span>
-                  {isActive && <span className="w-1.5 h-1.5 rounded-full bg-[var(--accent-color)]" />}
+                  {isActive && <span className="w-1.5 h-1.5 rounded-xs bg-[var(--accent-color)]" />}
                 </a>
               );
             })}

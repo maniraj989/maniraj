@@ -125,7 +125,7 @@ export default function ProjectShowcase() {
                     {project.technologies.map((tech) => (
                       <span
                         key={tech}
-                        className="px-3 py-1 text-xs font-mono text-theme-text bg-theme-surface rounded-full border border-theme-border"
+                        className="px-3 py-1 text-xs font-mono text-theme-text bg-theme-surface rounded-md border border-theme-border"
                       >
                         {tech}
                       </span>

@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { ArrowRight, BookOpen, GitCommit, Calendar, Sparkles } from "lucide-react";
+import { ArrowRight, BookOpen, GitCommit, Calendar, Code } from "lucide-react";
 import {
   fetchGitHubCalendarData,
   fetchGitHubUserData,
@@ -28,7 +28,6 @@ export default function GithubActivity() {
   const [monthLabels, setMonthLabels] = useState<MonthLabel[]>([]);
   const [totalContributions, setTotalContributions] = useState<number>(89);
   const [activeDays, setActiveDays] = useState<number>(30);
-  const [isLoading, setIsLoading] = useState<boolean>(true);
 
   useEffect(() => {
     let isMounted = true;
@@ -47,7 +46,6 @@ export default function GithubActivity() {
           setMonthLabels(calendarResult.monthLabels);
           setTotalContributions(calendarResult.totalContributions);
 
-          // Calculate active days with commits
           let activeCount = 0;
           calendarResult.weeks.forEach((w) => {
             w.days.forEach((d) => {
@@ -62,8 +60,6 @@ export default function GithubActivity() {
         }
       } catch (err) {
         console.error("Error loading GitHub data:", err);
-      } finally {
-        if (isMounted) setIsLoading(false);
       }
     }
 
@@ -111,14 +107,14 @@ export default function GithubActivity() {
         <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-16 pb-6 border-b border-[#252A33]">
           <div>
             <span className="text-[11px] font-mono tracking-widest text-[var(--accent-color)] uppercase font-semibold block mb-2 flex items-center gap-2">
-              <span>06 // Public Workspace</span>
-              <span className="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-mono bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
-                <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse mr-1.5" />
-                Live GitHub Sync
+              <span>06 // Open Source</span>
+              <span className="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-mono bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+                <span className="w-1.5 h-1.5 rounded-sm bg-emerald-400 mr-1.5" />
+                GitHub Sync
               </span>
             </span>
             <h2 className="font-editorial-serif text-[clamp(2.5rem,5.5vw,4.5rem)] font-normal tracking-tight text-white leading-tight">
-              Open Source / Activity
+              Contribution Activity
             </h2>
           </div>
 
@@ -128,7 +124,7 @@ export default function GithubActivity() {
             rel="noopener noreferrer"
             className="group mt-4 sm:mt-0 inline-flex items-center gap-2 text-xs font-mono tracking-wider text-neutral-400 hover:text-white uppercase transition-colors"
           >
-            <span>View GitHub @maniraj989</span>
+            <span>View GitHub Profile</span>
             <ArrowRight className="w-3.5 h-3.5 transition-transform duration-150 group-hover:translate-x-1" />
           </a>
         </div>
@@ -136,7 +132,7 @@ export default function GithubActivity() {
         {/* 2-Column: Graph on Left, Metrics on Right */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           {/* Contribution Graph */}
-          <div className="lg:col-span-8 p-6 rounded-2xl bg-[#0D1117] border border-[#252A33] overflow-x-auto no-scrollbar shadow-2xl">
+          <div className="lg:col-span-8 p-6 rounded-xl bg-[#0D1117] border border-[#252A33] overflow-x-auto no-scrollbar shadow-xl">
             {/* Header info inside card */}
             <div className="flex items-center justify-between mb-4 pb-3 border-b border-[#21262d]/60 min-w-[720px]">
               <div className="flex items-center gap-2 text-xs font-mono text-neutral-300">
@@ -194,7 +190,7 @@ export default function GithubActivity() {
             <div className="mt-5 flex items-center justify-between text-[11px] font-mono text-neutral-400 pt-4 border-t border-[#252A33]">
               <span className="flex items-center gap-1.5">
                 <GitCommit className="w-3.5 h-3.5 text-[var(--accent-color)]" />
-                <span>Original 52-week contribution timeline</span>
+                <span>Original 52-week timeline</span>
               </span>
 
               <div className="flex items-center gap-1.5 text-[10px]">
@@ -220,7 +216,7 @@ export default function GithubActivity() {
                   {totalContributions}
                 </div>
                 <div className="text-xs font-mono text-neutral-400">
-                  Original Annual Commits
+                  Annual Contributions
                 </div>
               </div>
             </div>
@@ -241,14 +237,14 @@ export default function GithubActivity() {
 
             <div className="p-5 rounded-xl bg-[#0D1117] border border-[#252A33] flex items-center gap-4 hover:border-neutral-600 transition-colors">
               <div className="w-11 h-11 rounded-lg bg-[#161B22] border border-[#252A33] flex items-center justify-center shrink-0">
-                <Sparkles className="w-5 h-5 text-amber-400" />
+                <Code className="w-5 h-5 text-cyan-400" />
               </div>
               <div>
                 <div className="text-2xl font-bold font-mono text-white tracking-tight">
                   {activeDays}
                 </div>
                 <div className="text-xs font-mono text-neutral-400">
-                  Active Commit Days (2026)
+                  Active Commit Days
                 </div>
               </div>
             </div>

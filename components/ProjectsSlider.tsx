@@ -91,28 +91,28 @@ export default function ProjectsSlider() {
               03 // Selected Work
             </span>
             <h2 className="font-editorial-serif text-[clamp(2.5rem,5.5vw,4.5rem)] font-normal tracking-tight text-theme-text leading-tight">
-              Featured Case Studies
+              Featured Projects
             </h2>
           </div>
 
-          {/* Slider Controls: ← Previous / Next → */}
-          <div className="mt-6 sm:mt-0 flex items-center space-x-3">
+          {/* Slider Controls: Clean Rectangular Buttons (No Pills) */}
+          <div className="mt-6 sm:mt-0 flex items-center space-x-2.5">
             <button
               type="button"
               onClick={() => scroll("left")}
               disabled={!canScrollLeft}
-              className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-xs font-mono font-medium border border-theme-border bg-theme-surface text-theme-text hover:border-theme-borderStrong transition-all duration-150 disabled:opacity-30 disabled:cursor-not-allowed focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent-color)]"
+              className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-md text-xs font-mono font-medium border border-theme-border bg-theme-surface text-theme-text hover:border-theme-borderStrong transition-all duration-150 disabled:opacity-30 disabled:cursor-not-allowed focus:outline-none"
               aria-label="Previous Project"
             >
               <ChevronLeft className="w-3.5 h-3.5" />
-              <span className="hidden sm:inline">Previous</span>
+              <span className="hidden sm:inline">Prev</span>
             </button>
 
             <button
               type="button"
               onClick={() => scroll("right")}
               disabled={!canScrollRight}
-              className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-xs font-mono font-medium border border-theme-border bg-theme-surface text-theme-text hover:border-theme-borderStrong transition-all duration-150 disabled:opacity-30 disabled:cursor-not-allowed focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent-color)]"
+              className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-md text-xs font-mono font-medium border border-theme-border bg-theme-surface text-theme-text hover:border-theme-borderStrong transition-all duration-150 disabled:opacity-30 disabled:cursor-not-allowed focus:outline-none"
               aria-label="Next Project"
             >
               <span className="hidden sm:inline">Next</span>
@@ -120,12 +120,12 @@ export default function ProjectsSlider() {
             </button>
 
             <a
-              href="https://github.com/maniraj989?tab=repositories"
+              href="https://github.com/maniraj989"
               target="_blank"
               rel="noopener noreferrer"
               className="hidden lg:inline-flex items-center gap-1.5 pl-3 text-xs font-mono text-theme-muted hover:text-[var(--accent-color)] uppercase tracking-wider transition-colors"
             >
-              <span>All Repos</span>
+              <span>GitHub</span>
               <ArrowRight className="w-3.5 h-3.5" />
             </a>
           </div>
@@ -137,7 +137,7 @@ export default function ProjectsSlider() {
           onKeyDown={handleKeyDown}
           tabIndex={0}
           role="region"
-          aria-label="Projects slider. Use left and right arrow keys to navigate."
+          aria-label="Projects slider"
         >
           <div
             ref={scrollContainerRef}
@@ -154,11 +154,11 @@ export default function ProjectsSlider() {
             ))}
           </div>
 
-          {/* Minimal Bottom Position / Scroll Progress Indicator */}
+          {/* Bottom Position / Progress Indicator */}
           <div className="mt-10 flex flex-col items-center">
-            <div className="w-full max-w-xl h-1 bg-theme-border rounded-full overflow-hidden">
+            <div className="w-full max-w-xl h-1 bg-theme-border rounded-sm overflow-hidden">
               <div
-                className="h-full bg-[var(--accent-color)] rounded-full transition-all duration-150 ease-out"
+                className="h-full bg-[var(--accent-color)] rounded-sm transition-all duration-150 ease-out"
                 style={{ width: `${Math.max(25, scrollProgress)}%` }}
               />
             </div>

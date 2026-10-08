@@ -68,7 +68,7 @@ export default function Footer() {
               className="hover:text-theme-text transition-colors text-xs font-mono"
               aria-label="Email"
             >
-              Email ↗
+              Email
             </a>
           </div>
         </div>
@@ -77,7 +77,7 @@ export default function Footer() {
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs font-mono text-theme-muted gap-4">
           <p>© 2026 Maniraj Sharma. All rights reserved.</p>
           <p className="text-[11px] text-theme-muted/60">
-            Crafted with Next.js, TypeScript &amp; Space Grotesk.
+            Built with Next.js &amp; TypeScript.
           </p>
         </div>
       </div>

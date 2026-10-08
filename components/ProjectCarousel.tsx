@@ -93,7 +93,7 @@ export default function ProjectCarousel({ projects }: { projects: Project[] }) {
         type="button"
         onClick={() => scroll("left")}
         disabled={!canScrollLeft}
-        className={`hidden md:flex absolute -left-5 top-1/2 -translate-y-1/2 z-20 w-10 h-10 rounded-full bg-white border border-[#E6E7EA] shadow-sm items-center justify-center text-[#111111] transition-all duration-150 ${
+        className={`hidden md:flex absolute -left-5 top-1/2 -translate-y-1/2 z-20 w-10 h-10 rounded-md bg-white border border-[#E6E7EA] shadow-sm items-center justify-center text-[#111111] transition-all duration-150 ${
           !canScrollLeft
             ? "opacity-20 cursor-not-allowed"
             : "hover:border-neutral-400 active:scale-95"
@@ -107,7 +107,7 @@ export default function ProjectCarousel({ projects }: { projects: Project[] }) {
         type="button"
         onClick={() => scroll("right")}
         disabled={!canScrollRight}
-        className={`hidden md:flex absolute -right-5 top-1/2 -translate-y-1/2 z-20 w-10 h-10 rounded-full bg-white border border-[#E6E7EA] shadow-sm items-center justify-center text-[#111111] transition-all duration-150 ${
+        className={`hidden md:flex absolute -right-5 top-1/2 -translate-y-1/2 z-20 w-10 h-10 rounded-md bg-white border border-[#E6E7EA] shadow-sm items-center justify-center text-[#111111] transition-all duration-150 ${
           !canScrollRight
             ? "opacity-20 cursor-not-allowed"
             : "hover:border-neutral-400 active:scale-95"
@@ -133,11 +133,11 @@ export default function ProjectCarousel({ projects }: { projects: Project[] }) {
         ))}
       </div>
 
-      {/* Minimal Bottom Scrollbar Indicator matching Reference */}
+      {/* Minimal Bottom Scrollbar Indicator */}
       <div className="mt-8 flex flex-col items-center">
-        <div className="w-full max-w-2xl h-1 bg-[#E6E7EA] rounded-full overflow-hidden">
+        <div className="w-full max-w-2xl h-1 bg-[#E6E7EA] rounded-sm overflow-hidden">
           <div
-            className="h-full bg-editorial-accent rounded-full transition-all duration-150 ease-out"
+            className="h-full bg-editorial-accent rounded-sm transition-all duration-150 ease-out"
             style={{ width: `${Math.max(20, scrollProgress)}%` }}
           />
         </div>
@@ -148,7 +148,7 @@ export default function ProjectCarousel({ projects }: { projects: Project[] }) {
             type="button"
             onClick={() => scroll("left")}
             disabled={!canScrollLeft}
-            className="p-1.5 rounded-full border border-[#E6E7EA] bg-white text-[#111111] disabled:opacity-20"
+            className="p-1.5 rounded-md border border-[#E6E7EA] bg-white text-[#111111] disabled:opacity-20"
             aria-label="Previous project"
           >
             <ChevronLeft className="w-4 h-4" />
@@ -158,7 +158,7 @@ export default function ProjectCarousel({ projects }: { projects: Project[] }) {
             type="button"
             onClick={() => scroll("right")}
             disabled={!canScrollRight}
-            className="p-1.5 rounded-full border border-[#E6E7EA] bg-white text-[#111111] disabled:opacity-20"
+            className="p-1.5 rounded-md border border-[#E6E7EA] bg-white text-[#111111] disabled:opacity-20"
             aria-label="Next project"
           >
             <ChevronRight className="w-4 h-4" />

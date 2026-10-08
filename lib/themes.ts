@@ -1,4 +1,4 @@
-export type AccentColor = "blue" | "violet" | "emerald" | "orange";
+export type AccentColor = "blue" | "slate" | "emerald" | "orange";
 export type Mode = "dark" | "light";
 
 export interface AccentTheme {
@@ -18,11 +18,11 @@ export const ACCENT_THEMES: AccentTheme[] = [
     hover: "#2046E0",
   },
   {
-    id: "violet",
-    name: "Violet",
-    color: "#8B5CF6",
-    rgb: "139, 92, 246",
-    hover: "#7C3AED",
+    id: "slate",
+    name: "Slate",
+    color: "#64748B",
+    rgb: "100, 116, 139",
+    hover: "#475569",
   },
   {
     id: "emerald",

@@ -7,31 +7,8 @@ export default function CodeVisual() {
 
   return (
     <div className="relative w-full max-w-[540px]">
-      {/* Floating Tech Badges around the Visual */}
-      <div className="hidden sm:flex absolute -top-4 -right-2 z-20 items-center gap-1.5 px-3 py-1.5 rounded-full bg-theme-surface border border-theme-border shadow-md animate-bounce duration-[3000ms]">
-        <svg className="w-3.5 h-3.5 text-[#61DAFB]" viewBox="-11.5 -10.23174 23 20.46348" fill="currentColor">
-          <circle cx="0" cy="0" r="2.05" />
-          <g stroke="currentColor" strokeWidth="1" fill="none">
-            <ellipse rx="11" ry="4.2" />
-            <ellipse rx="11" ry="4.2" transform="rotate(60)" />
-            <ellipse rx="11" ry="4.2" transform="rotate(120)" />
-          </g>
-        </svg>
-        <span className="font-mono text-[11px] font-medium text-theme-text">React 19</span>
-      </div>
-
-      <div className="hidden sm:flex absolute -bottom-4 -left-3 z-20 items-center gap-1.5 px-3 py-1.5 rounded-full bg-theme-surface border border-theme-border shadow-md animate-pulse">
-        <span className="w-2 h-2 rounded-full bg-[var(--accent-color)]" />
-        <span className="font-mono text-[11px] font-medium text-theme-text">Next.js 15 App Router</span>
-      </div>
-
-      <div className="hidden md:flex absolute top-1/2 -right-6 -translate-y-1/2 z-20 items-center gap-1.5 px-2.5 py-1 rounded-full bg-theme-surface border border-theme-border shadow-sm">
-        <span className="font-mono text-[10px] text-[#F7DF1E] font-bold">JS</span>
-        <span className="font-mono text-[11px] text-theme-muted">ESNext</span>
-      </div>
-
       {/* Main Browser / Code Window */}
-      <div className="rounded-xl overflow-hidden bg-theme-surface border border-theme-border shadow-2xl transition-all duration-300 hover:border-theme-borderStrong">
+      <div className="rounded-xl overflow-hidden bg-theme-surface border border-theme-border shadow-lg transition-all duration-300 hover:border-theme-borderStrong">
         {/* Window Chrome / Titlebar */}
         <div className="flex items-center justify-between px-4 py-3 bg-theme-elevated border-b border-theme-border">
           <div className="flex items-center space-x-2">
@@ -46,10 +23,10 @@ export default function CodeVisual() {
             <span className="text-theme-text font-medium">manirajsharma.com.np</span>
           </div>
 
-          {/* Live Indicator */}
+          {/* Status Indicator */}
           <div className="flex items-center gap-1.5 text-[10px] font-mono text-emerald-500">
-            <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-ping" />
-            <span>active</span>
+            <span className="w-1.5 h-1.5 rounded-sm bg-emerald-500" />
+            <span>online</span>
           </div>
         </div>
 
@@ -87,7 +64,7 @@ export default function CodeVisual() {
                 <span className="text-theme-muted/40 select-none w-4 text-right">1</span>
                 <span>
                   <span className="text-[var(--accent-color)]">interface</span>{" "}
-                  <span className="text-emerald-500">FullStackEngineer</span> &#123;
+                  <span className="text-emerald-500">FullStackDeveloper</span> &#123;
                 </span>
               </div>
               <div className="flex gap-4">
@@ -105,22 +82,22 @@ export default function CodeVisual() {
               <div className="flex gap-4">
                 <span className="text-theme-muted/40 select-none w-4 text-right">4</span>
                 <span className="pl-4">
-                  core: [<span className="text-emerald-500">&quot;React&quot;</span>,{" "}
-                  <span className="text-emerald-500">&quot;JavaScript&quot;</span>,{" "}
+                  stack: [<span className="text-emerald-500">&quot;React&quot;</span>,{" "}
                   <span className="text-emerald-500">&quot;Next.js&quot;</span>,{" "}
+                  <span className="text-emerald-500">&quot;TypeScript&quot;</span>,{" "}
                   <span className="text-emerald-500">&quot;Node.js&quot;</span>];
                 </span>
               </div>
               <div className="flex gap-4">
                 <span className="text-theme-muted/40 select-none w-4 text-right">5</span>
                 <span className="pl-4">
-                  philosophy: <span className="text-amber-500">&quot;Clean code · Scalable systems · UX&quot;</span>;
+                  focus: <span className="text-amber-500">&quot;Web applications &amp; systems&quot;</span>;
                 </span>
               </div>
               <div className="flex gap-4">
                 <span className="text-theme-muted/40 select-none w-4 text-right">6</span>
                 <span className="pl-4">
-                  openForHiring: <span className="text-[var(--accent-color)] font-bold">true</span>;
+                  available: <span className="text-[var(--accent-color)] font-bold">true</span>;
                 </span>
               </div>
               <div className="flex gap-4">
@@ -132,7 +109,6 @@ export default function CodeVisual() {
                 <span>
                   <span className="text-[var(--accent-color)]">export default</span>{" "}
                   <span className="text-emerald-500">ManirajSharma</span>;
-                  <span className="inline-block w-2 h-4 bg-[var(--accent-color)] ml-1.5 align-middle animate-pulse" />
                 </span>
               </div>
             </div>
@@ -151,13 +127,13 @@ export default function CodeVisual() {
               <div className="flex gap-4">
                 <span className="text-theme-muted/40 select-none w-4 text-right">3</span>
                 <span className="pl-8">
-                  <span className="text-emerald-500">&quot;framework&quot;</span>: <span className="text-amber-500">&quot;Next.js 15 App Router&quot;</span>,
+                  <span className="text-emerald-500">&quot;framework&quot;</span>: <span className="text-amber-500">&quot;Next.js App Router&quot;</span>,
                 </span>
               </div>
               <div className="flex gap-4">
                 <span className="text-theme-muted/40 select-none w-4 text-right">4</span>
                 <span className="pl-8">
-                  <span className="text-emerald-500">&quot;state&quot;</span>: <span className="text-amber-500">&quot;React Context &amp; Hooks&quot;</span>
+                  <span className="text-emerald-500">&quot;ui&quot;</span>: <span className="text-amber-500">&quot;Tailwind CSS&quot;</span>
                 </span>
               </div>
               <div className="flex gap-4">
@@ -167,7 +143,7 @@ export default function CodeVisual() {
               <div className="flex gap-4">
                 <span className="text-theme-muted/40 select-none w-4 text-right">6</span>
                 <span className="pl-4">
-                  <span className="text-[var(--accent-color)]">&quot;backend&quot;</span>: [<span className="text-amber-500">&quot;Node.js&quot;</span>, <span className="text-amber-500">&quot;Express.js&quot;</span>, <span className="text-amber-500">&quot;MongoDB&quot;</span>]
+                  <span className="text-[var(--accent-color)]">&quot;backend&quot;</span>: [<span className="text-amber-500">&quot;Node.js&quot;</span>, <span className="text-amber-500">&quot;Express.js&quot;</span>, <span className="text-amber-500">&quot;PostgreSQL&quot;</span>, <span className="text-amber-500">&quot;MongoDB&quot;</span>]
                 </span>
               </div>
               <div className="flex gap-4">
@@ -185,7 +161,7 @@ export default function CodeVisual() {
             <span>TypeScript</span>
           </div>
           <div className="flex items-center gap-1.5 text-theme-text">
-            <span className="w-1.5 h-1.5 rounded-full bg-[var(--accent-color)]" />
+            <span className="w-1.5 h-1.5 rounded-sm bg-[var(--accent-color)]" />
             <span>Ready for production</span>
           </div>
         </div>

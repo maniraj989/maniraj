@@ -25,21 +25,21 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative min-h-[92vh] flex items-center pt-28 pb-16 md:py-32 border-b border-theme-border overflow-hidden"
+      className="relative min-h-[90vh] flex items-center pt-28 pb-16 md:py-32 border-b border-theme-border overflow-hidden"
     >
       <div className="max-w-editorial w-full mx-auto px-6 sm:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
-          {/* Left Column: Bold Editorial Typography Composition */}
+          {/* Left Column: Bold Typography & Clear Developer Intro */}
           <div className="lg:col-span-7 flex flex-col justify-center">
-            {/* Availability Status Badge */}
+            {/* Availability Status */}
             <div className="inline-flex items-center gap-2 mb-6">
-              <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+              <span className="w-2 h-2 rounded-sm bg-emerald-500" />
               <span className="text-[11px] font-mono tracking-widest uppercase text-theme-muted">
-                Available for selected projects
+                Available for engineering opportunities
               </span>
             </div>
 
-            {/* Giant Display Headline in Instrument Serif */}
+            {/* Display Headline */}
             <h1 className="font-editorial-serif text-[clamp(3.8rem,8.5vw,8.5rem)] font-normal tracking-tight text-theme-text leading-[0.92] select-none">
               Maniraj <br />
               <span className="italic">Sharma</span>
@@ -53,26 +53,26 @@ export default function Hero() {
               </span>
             </div>
 
-            {/* Concise Mission Statement */}
+            {/* Concrete, Straightforward Copy */}
             <p className="text-theme-muted text-base sm:text-lg font-normal leading-relaxed max-w-lg mb-8">
-              I build thoughtful digital products, scalable web applications and interfaces with modern JavaScript technologies.
+              Building reliable web applications, internal tools, and responsive digital systems with TypeScript, React, Next.js, and Node.js.
             </p>
 
-            {/* Action Buttons & Socials */}
+            {/* Action Buttons & Socials - Clean Rectangular Geometry (No Pills) */}
             <div className="flex flex-wrap items-center gap-4 sm:gap-6">
               <a
                 href="#work"
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-full text-xs font-semibold tracking-wide bg-[var(--accent-color)] hover:bg-[var(--accent-hover)] text-white shadow-md transition-all duration-150 active:scale-95"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-md text-xs font-semibold tracking-wide bg-[var(--accent-color)] hover:bg-[var(--accent-hover)] text-white shadow-sm transition-all duration-150 active:scale-95"
               >
-                <span>View Selected Work</span>
+                <span>View Projects</span>
                 <ArrowDown className="w-3.5 h-3.5" />
               </a>
 
               <a
                 href="#contact"
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-full text-xs font-semibold tracking-wide bg-theme-surface hover:bg-theme-elevated text-theme-text border border-theme-border hover:border-theme-borderStrong transition-all duration-150 active:scale-95"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-md text-xs font-semibold tracking-wide bg-theme-surface hover:bg-theme-elevated text-theme-text border border-theme-border hover:border-theme-borderStrong transition-all duration-150 active:scale-95"
               >
-                <span>Contact Me</span>
+                <span>Get in Touch</span>
               </a>
 
               {/* Social Icons */}
@@ -106,7 +106,7 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* Right Column: Interactive Code Visual (No human portrait!) */}
+          {/* Right Column: Code Window */}
           <div className="lg:col-span-5 flex justify-center lg:justify-end">
             <CodeVisual />
           </div>

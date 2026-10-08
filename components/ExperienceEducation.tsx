@@ -32,7 +32,7 @@ export default function ExperienceEducation() {
                 <div key={item.id} className="relative group">
                   {/* Timeline Indicator Node */}
                   <span
-                    className={`absolute -left-[35px] sm:-left-[39px] top-1.5 w-3.5 h-3.5 rounded-full border-2 border-theme-bg transition-transform duration-200 group-hover:scale-125 ${
+                    className={`absolute -left-[35px] sm:-left-[39px] top-2 w-2.5 h-2.5 rounded-sm border-2 border-theme-bg transition-transform duration-200 group-hover:scale-125 ${
                       item.current ? "bg-[var(--accent-color)]" : "bg-theme-muted"
                     }`}
                   />

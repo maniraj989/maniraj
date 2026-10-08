@@ -66,47 +66,47 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-28 md:py-40 bg-theme-bg border-b border-theme-border">
+    <section id="contact" className="py-28 md:py-36 bg-theme-bg border-b border-theme-border">
       <div className="max-w-editorial mx-auto px-6 sm:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
-          {/* Left Column: Huge Headline */}
+          {/* Left Column */}
           <div className="lg:col-span-8">
             <span className="text-[11px] font-mono tracking-widest text-[var(--accent-color)] uppercase font-semibold block mb-4">
-              08 // Let&apos;s Connect
+              08 // Contact
             </span>
 
             <h2 className="font-editorial-serif text-[clamp(3.2rem,7vw,7rem)] font-normal tracking-tight text-theme-text leading-[0.92] mb-8 select-none">
-              LET&apos;S BUILD <br />
-              <span className="italic text-[var(--accent-color)]">SOMETHING</span> <br />
-              USEFUL.
+              LET&apos;S TALK <br />
+              <span className="italic text-[var(--accent-color)]">PROJECTS</span> <br />
+              &amp; IDEAS.
             </h2>
 
-            <p className="text-theme-muted text-lg sm:text-xl font-normal leading-relaxed max-w-xl mb-10">
-              Have an idea, project or opportunity? I am open to discussing engineering roles, web applications, and technical consulting.
+            <p className="text-theme-muted text-base sm:text-lg font-normal leading-relaxed max-w-xl mb-10">
+              Have an engineering role, website, or web application project? Reach out directly by email or send a brief message.
             </p>
 
-            {/* Conversation Trigger Button */}
+            {/* Conversation Trigger Button (No pill shape) */}
             {!showForm ? (
               <button
                 type="button"
                 onClick={() => setShowForm(true)}
-                className="inline-flex items-center gap-2.5 px-8 py-4 rounded-full text-sm font-semibold tracking-wide bg-[var(--accent-color)] hover:bg-[var(--accent-hover)] text-white shadow-lg transition-all duration-150 active:scale-95"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-md text-xs font-semibold tracking-wide bg-[var(--accent-color)] hover:bg-[var(--accent-hover)] text-white shadow-sm transition-all duration-150 active:scale-95"
               >
-                <span>Start a conversation</span>
+                <span>Send a Message</span>
                 <ArrowRight className="w-4 h-4" />
               </button>
             ) : null}
 
             {/* Interactive Contact Form */}
             {showForm && (
-              <div className="p-8 rounded-2xl bg-theme-surface border border-theme-border max-w-xl shadow-xl animate-in fade-in duration-200">
+              <div className="p-8 rounded-xl bg-theme-surface border border-theme-border max-w-xl shadow-lg">
                 {isSent ? (
-                  <div className="p-6 rounded-xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 flex items-center space-x-3">
+                  <div className="p-6 rounded-lg bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 flex items-center space-x-3">
                     <CheckCircle2 className="w-5 h-5 shrink-0" />
                     <div>
-                      <div className="font-bold text-sm text-theme-text">Message received!</div>
+                      <div className="font-bold text-sm text-theme-text">Message sent</div>
                       <div className="text-xs text-theme-muted mt-0.5">
-                        Thanks for getting in touch. I will respond to your email shortly.
+                        Thank you for reaching out. I will reply to your email shortly.
                       </div>
                     </div>
                   </div>
@@ -124,7 +124,7 @@ export default function Contact() {
                           value={formData.name}
                           onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                           placeholder="Your Name"
-                          className="w-full px-4 py-2.5 rounded-lg border border-theme-border bg-theme-elevated text-sm text-theme-text placeholder:text-theme-muted/50 focus:outline-none focus:border-[var(--accent-color)]"
+                          className="w-full px-4 py-2.5 rounded-md border border-theme-border bg-theme-elevated text-sm text-theme-text placeholder:text-theme-muted/50 focus:outline-none focus:border-[var(--accent-color)]"
                         />
                       </div>
 
@@ -139,14 +139,14 @@ export default function Contact() {
                           value={formData.email}
                           onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                           placeholder="your.email@example.com"
-                          className="w-full px-4 py-2.5 rounded-lg border border-theme-border bg-theme-elevated text-sm text-theme-text placeholder:text-theme-muted/50 focus:outline-none focus:border-[var(--accent-color)]"
+                          className="w-full px-4 py-2.5 rounded-md border border-theme-border bg-theme-elevated text-sm text-theme-text placeholder:text-theme-muted/50 focus:outline-none focus:border-[var(--accent-color)]"
                         />
                       </div>
                     </div>
 
                     <div>
                       <label htmlFor="user-message" className="block text-xs font-mono text-theme-muted mb-1.5">
-                        Project Brief / Message
+                        Message
                       </label>
                       <textarea
                         id="user-message"
@@ -154,13 +154,13 @@ export default function Contact() {
                         rows={4}
                         value={formData.message}
                         onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                        placeholder="Tell me about what you are looking to build..."
-                        className="w-full px-4 py-2.5 rounded-lg border border-theme-border bg-theme-elevated text-sm text-theme-text placeholder:text-theme-muted/50 focus:outline-none focus:border-[var(--accent-color)] resize-none"
+                        placeholder="Project details or question..."
+                        className="w-full px-4 py-2.5 rounded-md border border-theme-border bg-theme-elevated text-sm text-theme-text placeholder:text-theme-muted/50 focus:outline-none focus:border-[var(--accent-color)] resize-none"
                       />
                     </div>
 
                     {errorMessage && (
-                      <div className="p-3 rounded-lg bg-rose-500/10 border border-rose-500/30 text-rose-400 text-xs font-mono">
+                      <div className="p-3 rounded-md bg-rose-500/10 border border-rose-500/30 text-rose-400 text-xs font-mono">
                         {errorMessage}
                       </div>
                     )}
@@ -169,9 +169,9 @@ export default function Contact() {
                       <button
                         type="submit"
                         disabled={isSubmitting}
-                        className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full text-xs font-semibold bg-[var(--accent-color)] hover:bg-[var(--accent-hover)] text-white transition-colors disabled:opacity-50"
+                        className="inline-flex items-center gap-2 px-6 py-2.5 rounded-md text-xs font-semibold bg-[var(--accent-color)] hover:bg-[var(--accent-hover)] text-white transition-colors disabled:opacity-50"
                       >
-                        <span>{isSubmitting ? "Dispatching..." : "Send Message"}</span>
+                        <span>{isSubmitting ? "Sending..." : "Send Message"}</span>
                         <ArrowRight className="w-3.5 h-3.5" />
                       </button>
 
@@ -193,7 +193,7 @@ export default function Contact() {
           <div className="lg:col-span-4 lg:pt-16 flex flex-col space-y-8">
             <div>
               <span className="text-xs font-mono tracking-widest uppercase text-theme-muted block mb-3">
-                Direct Contact
+                Email
               </span>
               <a
                 href="mailto:manirajsharma193@gmail.com"
@@ -205,7 +205,7 @@ export default function Contact() {
 
             <div>
               <span className="text-xs font-mono tracking-widest uppercase text-theme-muted block mb-3">
-                Network &amp; Profiles
+                Profiles
               </span>
               <div className="flex flex-col space-y-3 font-mono text-sm">
                 <a
@@ -224,7 +224,7 @@ export default function Contact() {
                   className="flex items-center gap-3 text-theme-muted hover:text-[var(--accent-color)] transition-colors"
                 >
                   <LinkedInIcon className="w-4 h-4" />
-                  <span>linkedin.com/in/maniraj-sharmma-221b69355</span>
+                  <span>linkedin.com/in/maniraj-sharmma</span>
                 </a>
                 <a
                   href="https://manirajsharma.com.np"

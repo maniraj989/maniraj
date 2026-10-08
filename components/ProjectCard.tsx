@@ -27,10 +27,9 @@ export default function ProjectCard({
 
   return (
     <article
-      data-cursor="view"
-      className="group flex flex-col bg-theme-surface border border-theme-border hover:border-theme-borderStrong rounded-2xl overflow-hidden transition-all duration-300 shadow-xs hover:shadow-xl w-[85vw] max-w-[340px] sm:w-[360px] md:w-[380px] shrink-0 select-none"
+      className="group flex flex-col bg-theme-surface border border-theme-border hover:border-theme-borderStrong rounded-xl overflow-hidden transition-all duration-200 shadow-sm w-[85vw] max-w-[340px] sm:w-[360px] md:w-[380px] shrink-0 select-none"
     >
-      {/* 55-60% Visual Area with Browser Window Top */}
+      {/* Visual Area with Browser Window Top */}
       <div className="relative aspect-[16/10] w-full overflow-hidden bg-theme-elevated border-b border-theme-border">
         {/* Browser dots */}
         <div className="flex items-center space-x-1.5 px-3 py-2 bg-theme-elevated border-b border-theme-border">
@@ -48,7 +47,7 @@ export default function ProjectCard({
             alt={project.title}
             fill
             sizes="(max-width: 768px) 340px, 380px"
-            className="object-cover object-top transition-transform duration-500 ease-out group-hover:scale-[1.03]"
+            className="object-cover object-top transition-transform duration-300 ease-out group-hover:scale-[1.02]"
           />
         </div>
       </div>
@@ -65,7 +64,7 @@ export default function ProjectCard({
             </span>
           </div>
 
-          <h3 className="font-sans font-bold text-lg text-theme-text tracking-tight group-hover:text-[var(--accent-color)] transition-colors duration-200">
+          <h3 className="font-sans font-bold text-lg text-theme-text tracking-tight group-hover:text-[var(--accent-color)] transition-colors duration-150">
             {project.title}
           </h3>
 
@@ -73,12 +72,12 @@ export default function ProjectCard({
             {project.description}
           </p>
 
-          {/* Tech Badges */}
+          {/* Tech Badges (Crisp rounded-md, not pills) */}
           <div className="flex flex-wrap gap-1.5 mt-4">
             {project.technologies.map((tech) => (
               <span
                 key={tech}
-                className="px-2.5 py-0.5 text-[11px] font-mono text-theme-text bg-theme-elevated rounded-full border border-theme-border"
+                className="px-2.5 py-0.5 text-[11px] font-mono text-theme-text bg-theme-elevated rounded-md border border-theme-border"
               >
                 {tech}
               </span>
