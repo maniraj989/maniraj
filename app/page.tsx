@@ -5,6 +5,7 @@ import ReactFeature from "@/components/ReactFeature";
 import ProjectsSlider from "@/components/ProjectsSlider";
 import ExperienceEducation from "@/components/ExperienceEducation";
 import ToolsGrid from "@/components/ToolsGrid";
+import CurrentlyFocusing from "@/components/CurrentlyFocusing";
 import GithubActivity from "@/components/GithubActivity";
 import Achievements from "@/components/Achievements";
 import Contact from "@/components/Contact";
@@ -35,13 +36,16 @@ export default function Home() {
         {/* 7. Tools of the Trade: Dynamic grid with hover interactions */}
         <ToolsGrid />
 
-        {/* 8. Open Source Activity: Dark break section with 52-week calendar */}
+        {/* 8. Continuous Growth: Currently Focusing On */}
+        <CurrentlyFocusing />
+
+        {/* 9. Open Source Activity: Dark break section with 52-week calendar */}
         <GithubActivity />
 
-        {/* 9. Key Achievements: Numbered horizontal editorial list */}
+        {/* 10. Highlights: Numbered horizontal editorial list */}
         <Achievements />
 
-        {/* 10. Contact: Bold statement & conversation form */}
+        {/* 11. Contact: Bold statement & conversation form */}
         <Contact />
       </main>
 

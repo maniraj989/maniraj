@@ -15,19 +15,19 @@ export const editorialAchievements: EditorialAchievement[] = [
   {
     number: "02",
     title: "Live Deployments",
-    context: "Built & launched web applications for e-learning, inventory, agency, and restaurant",
+    context: "Built and launched web applications for e-learning, inventory, agency and restaurant use cases.",
     year: "Production",
   },
   {
     number: "03",
     title: "Full-Stack Engineering",
-    context: "Engineered responsive client interfaces, REST endpoints, and database models",
-    year: "Ongoing",
+    context: "Built responsive interfaces, backend APIs and database-driven applications.",
+    year: "Engineering",
   },
   {
     number: "04",
     title: "Open Source Activity",
-    context: "Active development workflows and public code repositories on GitHub",
-    year: "Active",
+    context: "Active development workflows and public repositories on GitHub.",
+    year: "GitHub",
   },
 ];

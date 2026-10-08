@@ -7,10 +7,10 @@ export default function Achievements() {
         {/* Section Header */}
         <div className="mb-14">
           <span className="text-[11px] font-mono tracking-widest text-[var(--accent-color)] uppercase font-semibold block mb-2">
-            07 // Honors &amp; Milestones
+            07 // Highlights
           </span>
           <h2 className="font-editorial-serif text-[clamp(2.2rem,5vw,4rem)] font-normal tracking-tight text-theme-text leading-tight">
-            Key Achievements
+            Highlights
           </h2>
         </div>
 

@@ -48,14 +48,14 @@ export default function Hero() {
 
             {/* Role Eyebrow */}
             <div className="mt-6 mb-4">
-              <span className="text-xs font-mono font-semibold tracking-[0.25em] text-theme-muted uppercase">
-                Full-Stack Web Developer · India
+              <span className="text-xs font-mono font-semibold tracking-[0.22em] text-theme-muted uppercase">
+                FULL-STACK DEVELOPER · SOFTWARE ENGINEERING · INDIA
               </span>
             </div>
 
             {/* Concrete, Straightforward Copy */}
             <p className="text-theme-muted text-base sm:text-lg font-normal leading-relaxed max-w-lg mb-8">
-              Building reliable web applications, internal tools, and responsive digital systems with TypeScript, React, Next.js, and Node.js.
+              Building practical web applications, business systems, and digital products with clean architecture, responsive interfaces, and reliable engineering.
             </p>
 
             {/* Action Buttons & Socials - Clean Rectangular Geometry (No Pills) */}

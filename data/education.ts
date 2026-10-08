@@ -6,6 +6,7 @@ export interface EducationItem {
   period: string;
   location: string;
   grade: string;
+  coursework?: string[];
 }
 
 export const educationData: EducationItem[] = [
@@ -17,6 +18,14 @@ export const educationData: EducationItem[] = [
     period: "2025 - 2028",
     location: "Bengaluru, India",
     grade: "CGPA: 8.7 / 10.0",
+    coursework: [
+      "Data Structures & Algorithms",
+      "Object-Oriented Programming",
+      "Database Management Systems",
+      "Operating Systems",
+      "Computer Networks",
+      "Software Engineering",
+    ],
   },
   {
     id: "xavier-intl",

@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://manirajsharma.com.np/sitemap.xml",
+    sitemap: "https://www.manirajsharma.com.np/sitemap.xml",
   };
 }

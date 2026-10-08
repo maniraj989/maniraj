@@ -114,7 +114,7 @@ export default function GithubActivity() {
               </span>
             </span>
             <h2 className="font-editorial-serif text-[clamp(2.5rem,5.5vw,4.5rem)] font-normal tracking-tight text-white leading-tight">
-              Contribution Activity
+              GitHub Activity
             </h2>
           </div>
 

@@ -17,10 +17,10 @@
   --border-subtle: #E4E4DE;
   --border-strong: #C9C9C1;
 
-  /* Default Accent (Electric Blue) */
-  --accent-color: #315BFF;
-  --accent-rgb: 49, 91, 255;
-  --accent-hover: #2046E0;
+  /* Default Accent (Orange) */
+  --accent-color: #F97316;
+  --accent-rgb: 249, 115, 22;
+  --accent-hover: #EA580C;
 }
 
 html.dark {

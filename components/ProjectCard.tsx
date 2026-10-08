@@ -1,7 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import { ExternalLink } from "lucide-react";
+import Link from "next/link";
+import { ExternalLink, ArrowUpRight } from "lucide-react";
 import { Project } from "@/data/projects";
 
 function GitHubIcon({ className }: { className?: string }) {
@@ -65,7 +66,9 @@ export default function ProjectCard({
           </div>
 
           <h3 className="font-sans font-bold text-lg text-theme-text tracking-tight group-hover:text-[var(--accent-color)] transition-colors duration-150">
-            {project.title}
+            <Link href={`/work/${project.id}`}>
+              {project.title}
+            </Link>
           </h3>
 
           <p className="mt-2 text-xs sm:text-sm text-theme-muted leading-relaxed line-clamp-2">
@@ -86,26 +89,36 @@ export default function ProjectCard({
         </div>
 
         {/* Action Links */}
-        <div className="flex items-center space-x-5 mt-6 pt-4 border-t border-theme-border">
-          <a
-            href={project.liveUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-1.5 text-xs font-mono font-semibold text-theme-text hover:text-[var(--accent-color)] transition-colors uppercase tracking-wider"
-          >
-            <ExternalLink className="w-3.5 h-3.5" />
-            <span>Live Demo</span>
-          </a>
+        <div className="flex items-center justify-between mt-6 pt-4 border-t border-theme-border">
+          <div className="flex items-center space-x-4">
+            <a
+              href={project.liveUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 text-xs font-mono font-semibold text-theme-text hover:text-[var(--accent-color)] transition-colors uppercase tracking-wider"
+            >
+              <ExternalLink className="w-3.5 h-3.5" />
+              <span>Live Demo</span>
+            </a>
 
-          <a
-            href={project.githubUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-1.5 text-xs font-mono font-semibold text-theme-muted hover:text-theme-text transition-colors uppercase tracking-wider"
+            <a
+              href={project.githubUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 text-xs font-mono font-semibold text-theme-muted hover:text-theme-text transition-colors uppercase tracking-wider"
+            >
+              <GitHubIcon className="w-3.5 h-3.5" />
+              <span>GitHub</span>
+            </a>
+          </div>
+
+          <Link
+            href={`/work/${project.id}`}
+            className="inline-flex items-center gap-1 text-[11px] font-mono font-medium text-[var(--accent-color)] hover:text-[var(--accent-hover)] transition-colors uppercase tracking-wider"
           >
-            <GitHubIcon className="w-3.5 h-3.5" />
-            <span>GitHub</span>
-          </a>
+            <span>Overview</span>
+            <ArrowUpRight className="w-3.5 h-3.5" />
+          </Link>
         </div>
       </div>
     </article>

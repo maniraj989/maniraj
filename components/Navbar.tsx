@@ -6,12 +6,12 @@ import { Download, Menu, X } from "lucide-react";
 import ThemeSwitcher from "./ThemeSwitcher";
 
 const navLinks = [
-  { name: "Home", href: "#hero" },
-  { name: "About", href: "#about" },
-  { name: "Work", href: "#work" },
-  { name: "Experience", href: "#experience" },
-  { name: "Stack", href: "#stack" },
-  { name: "Contact", href: "#contact" },
+  { name: "Home", href: "/#hero" },
+  { name: "About", href: "/#about" },
+  { name: "Work", href: "/#work" },
+  { name: "Experience", href: "/#experience" },
+  { name: "Stack", href: "/#stack" },
+  { name: "Contact", href: "/#contact" },
 ];
 
 export default function Navbar() {
@@ -51,7 +51,7 @@ export default function Navbar() {
       <div className="max-w-editorial mx-auto px-6 sm:px-8 flex items-center justify-between">
         {/* Left: Branding */}
         <Link
-          href="#hero"
+          href="/#hero"
           className="group flex items-center space-x-2 focus:outline-none"
         >
           <span className="font-mono text-xs tracking-wider text-theme-muted group-hover:text-theme-text transition-colors">
@@ -68,7 +68,7 @@ export default function Navbar() {
         {/* Center: Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-7" aria-label="Main Navigation">
           {navLinks.map((link) => {
-            const sectionId = link.href.replace("#", "");
+            const sectionId = link.href.replace("/#", "").replace("#", "");
             const isActive = activeSection === sectionId;
             return (
               <a
@@ -94,9 +94,10 @@ export default function Navbar() {
           <ThemeSwitcher />
 
           <a
-            href="/resume/maniraj-sharma-cv.pdf"
-            download="Maniraj_Sharma_CV.pdf"
+            href="/resume/Maniraj-Sharma-Resume.pdf"
+            download="Maniraj-Sharma-Resume.pdf"
             className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md text-xs font-medium text-theme-text border border-theme-border hover:border-theme-borderStrong hover:bg-theme-surface transition-all duration-150"
+            title="Download Resume (PDF)"
           >
             <span>CV</span>
             <Download className="w-3.5 h-3.5 text-[var(--accent-color)]" />
@@ -122,7 +123,7 @@ export default function Navbar() {
         <div className="lg:hidden bg-theme-bg border-b border-theme-border px-6 py-6 space-y-4 shadow-lg">
           <nav className="flex flex-col space-y-3">
             {navLinks.map((link) => {
-              const sectionId = link.href.replace("#", "");
+              const sectionId = link.href.replace("/#", "").replace("#", "");
               const isActive = activeSection === sectionId;
               return (
                 <a
@@ -142,12 +143,12 @@ export default function Navbar() {
 
           <div className="pt-4 border-t border-theme-border flex items-center justify-between">
             <a
-              href="/resume/maniraj-sharma-cv.pdf"
-              download="Maniraj_Sharma_CV.pdf"
+              href="/resume/Maniraj-Sharma-Resume.pdf"
+              download="Maniraj-Sharma-Resume.pdf"
               onClick={() => setMobileMenuOpen(false)}
               className="inline-flex items-center gap-2 px-4 py-2 rounded-md text-xs font-medium bg-theme-surface border border-theme-border text-theme-text"
             >
-              <span>Download CV</span>
+              <span>Download Resume</span>
               <Download className="w-3.5 h-3.5 text-[var(--accent-color)]" />
             </a>
           </div>

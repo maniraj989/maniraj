@@ -11,6 +11,13 @@ export interface AccentTheme {
 
 export const ACCENT_THEMES: AccentTheme[] = [
   {
+    id: "orange",
+    name: "Orange",
+    color: "#F97316",
+    rgb: "249, 115, 22",
+    hover: "#EA580C",
+  },
+  {
     id: "blue",
     name: "Blue",
     color: "#315BFF",
@@ -30,12 +37,5 @@ export const ACCENT_THEMES: AccentTheme[] = [
     color: "#10B981",
     rgb: "16, 185, 129",
     hover: "#059669",
-  },
-  {
-    id: "orange",
-    name: "Orange",
-    color: "#F97316",
-    rgb: "249, 115, 22",
-    hover: "#EA580C",
   },
 ];

@@ -15,7 +15,7 @@ const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
   const [mode, setModeState] = useState<Mode>("dark");
-  const [accent, setAccentState] = useState<AccentColor>("blue");
+  const [accent, setAccentState] = useState<AccentColor>("orange");
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
@@ -32,7 +32,7 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
     if (savedAccent && ACCENT_THEMES.some((t) => t.id === savedAccent)) {
       setAccentState(savedAccent);
     } else {
-      setAccentState("blue");
+      setAccentState("orange");
     }
 
     setMounted(true);

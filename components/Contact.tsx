@@ -75,14 +75,12 @@ export default function Contact() {
               08 // Contact
             </span>
 
-            <h2 className="font-editorial-serif text-[clamp(3.2rem,7vw,7rem)] font-normal tracking-tight text-theme-text leading-[0.92] mb-8 select-none">
-              LET&apos;S TALK <br />
-              <span className="italic text-[var(--accent-color)]">PROJECTS</span> <br />
-              &amp; IDEAS.
+            <h2 className="font-editorial-serif text-[clamp(2.4rem,5vw,5rem)] font-normal tracking-tight text-theme-text leading-[1.02] mb-8">
+              Have a software engineering opportunity, web application project, or product idea?
             </h2>
 
             <p className="text-theme-muted text-base sm:text-lg font-normal leading-relaxed max-w-xl mb-10">
-              Have an engineering role, website, or web application project? Reach out directly by email or send a brief message.
+              I&apos;m open to internships, engineering opportunities, freelance projects, and interesting software projects.
             </p>
 
             {/* Conversation Trigger Button (No pill shape) */}
@@ -227,7 +225,7 @@ export default function Contact() {
                   <span>linkedin.com/in/maniraj-sharmma</span>
                 </a>
                 <a
-                  href="https://manirajsharma.com.np"
+                  href="https://www.manirajsharma.com.np/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-3 text-theme-muted hover:text-[var(--accent-color)] transition-colors"

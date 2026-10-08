@@ -119,6 +119,24 @@ export default function ExperienceEducation() {
                       {item.grade}
                     </span>
                   </div>
+
+                  {item.coursework && item.coursework.length > 0 && (
+                    <div className="mt-3 pt-3 border-t border-theme-border/60">
+                      <span className="text-[10px] font-mono tracking-wider text-theme-muted uppercase block mb-1.5">
+                        Relevant Coursework
+                      </span>
+                      <div className="flex flex-wrap gap-1.5">
+                        {item.coursework.map((course) => (
+                          <span
+                            key={course}
+                            className="px-2 py-0.5 text-[10px] font-mono text-theme-text bg-theme-surface rounded border border-theme-border"
+                          >
+                            {course}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                  )}
                 </div>
               ))}
             </div>

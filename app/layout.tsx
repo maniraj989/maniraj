@@ -11,42 +11,47 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  title: "Maniraj Sharma | Full-Stack Web Developer",
+  title: {
+    default: "Maniraj Sharma — Full-Stack Developer & Software Engineer",
+    template: "%s | Maniraj Sharma",
+  },
   description:
-    "Maniraj Sharma (manirajsharma, maniraj sharma). Full-stack web developer building production web applications, inventory management systems, e-learning platforms, and digital experiences with React, Next.js, and Node.js.",
+    "Maniraj Sharma is a Computer Science Engineering student and full-stack developer building web applications, business systems and digital products.",
   keywords: [
     "Maniraj Sharma",
     "manirajsharma",
     "maniraj sharma",
-    "Full-Stack Web Developer",
-    "Frontend Developer",
+    "Full-Stack Developer",
     "Software Engineer",
-    "React Developer",
+    "Computer Science Engineer",
     "Next.js Developer",
-    "JavaScript",
-    "TypeScript",
+    "React Developer",
     "Node.js",
+    "Spring Boot",
+    "PostgreSQL",
+    "Supabase",
+    "India",
   ],
-  authors: [{ name: "Maniraj Sharma", url: "https://manirajsharma.com.np" }],
+  authors: [{ name: "Maniraj Sharma", url: "https://www.manirajsharma.com.np" }],
   creator: "Maniraj Sharma",
-  metadataBase: new URL("https://manirajsharma.com.np"),
+  metadataBase: new URL("https://www.manirajsharma.com.np"),
   alternates: {
     canonical: "/",
   },
   openGraph: {
-    title: "Maniraj Sharma | Full-Stack Web Developer",
+    title: "Maniraj Sharma — Full-Stack Developer & Software Engineer",
     description:
-      "Maniraj Sharma (manirajsharma, maniraj sharma). Full-stack web developer building production web applications, inventory management systems, and e-learning platforms.",
-    url: "https://manirajsharma.com.np",
+      "Maniraj Sharma is a Computer Science Engineering student and full-stack developer building web applications, business systems and digital products.",
+    url: "https://www.manirajsharma.com.np",
     siteName: "Maniraj Sharma",
     locale: "en_US",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Maniraj Sharma | Full-Stack Web Developer",
+    title: "Maniraj Sharma — Full-Stack Developer & Software Engineer",
     description:
-      "Maniraj Sharma (manirajsharma, maniraj sharma). Full-stack web developer building production web applications, inventory systems, and modern web platforms.",
+      "Maniraj Sharma is a Computer Science Engineering student and full-stack developer building web applications, business systems and digital products.",
     creator: "@maniraj989",
   },
 };
@@ -58,25 +63,60 @@ export default function RootLayout({
 }>) {
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "Person",
-    name: "Maniraj Sharma",
-    alternateName: ["manirajsharma", "maniraj sharma"],
-    jobTitle: "Full-Stack Web Developer",
-    url: "https://manirajsharma.com.np",
-    sameAs: [
-      "https://github.com/maniraj989",
-      "https://www.linkedin.com/in/maniraj-sharmma-221b69355/",
-    ],
-    knowsAbout: [
-      "JavaScript",
-      "React",
-      "Next.js",
-      "Node.js",
-      "TypeScript",
-      "Tailwind CSS",
-      "MongoDB",
-      "Express.js",
-      "PostgreSQL",
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": "https://www.manirajsharma.com.np/#person",
+        name: "Maniraj Sharma",
+        alternateName: ["manirajsharma", "maniraj sharma"],
+        jobTitle: "Full-Stack Developer & Software Engineer",
+        description:
+          "Computer Science Engineering student and full-stack developer building practical web applications, business systems, and digital products.",
+        url: "https://www.manirajsharma.com.np",
+        sameAs: [
+          "https://github.com/maniraj989",
+          "https://www.linkedin.com/in/maniraj-sharmma-221b69355/",
+        ],
+        alumniOf: {
+          "@type": "EducationalOrganization",
+          name: "SRM Institute of Science and Technology",
+        },
+        knowsAbout: [
+          "Data Structures & Algorithms",
+          "Software Engineering",
+          "JavaScript",
+          "TypeScript",
+          "React",
+          "Next.js",
+          "Node.js",
+          "Express.js",
+          "Java",
+          "Spring Boot",
+          "PostgreSQL",
+          "Supabase",
+          "MongoDB",
+        ],
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://www.manirajsharma.com.np/#website",
+        url: "https://www.manirajsharma.com.np",
+        name: "Maniraj Sharma Portfolio",
+        description:
+          "Personal portfolio of Maniraj Sharma, showcasing full-stack web applications, business systems, and engineering projects.",
+        publisher: {
+          "@id": "https://www.manirajsharma.com.np/#person",
+        },
+      },
+      {
+        "@type": "ProfilePage",
+        "@id": "https://www.manirajsharma.com.np/#profilepage",
+        url: "https://www.manirajsharma.com.np",
+        name: "Maniraj Sharma — Profile",
+        mainEntity: {
+          "@id": "https://www.manirajsharma.com.np/#person",
+        },
+      },
     ],
   };
 

@@ -14,14 +14,22 @@ export default function About() {
           {/* Left Column: Headline & Overview */}
           <div className="lg:col-span-8">
             <h2 className="font-editorial-serif text-[clamp(2.6rem,5.5vw,5.5rem)] font-normal text-theme-text leading-[1.02] tracking-tight mb-8">
-              BUILDING <br />
-              <span className="italic text-[var(--accent-color)]">WEB APPLICATIONS</span> <br />
-              WITH SOLID ARCHITECTURE.
+              ENGINEERING <br />
+              <span className="italic text-[var(--accent-color)]">PRACTICAL SYSTEMS</span> <br />
+              FOR THE REAL WORLD.
             </h2>
 
-            <p className="text-theme-muted text-lg sm:text-xl font-normal leading-relaxed max-w-2xl">
-              Full-stack developer building practical web applications, business management platforms, and performant user interfaces with clean architecture and reliable engineering.
-            </p>
+            <div className="space-y-4 text-theme-muted text-base sm:text-lg font-normal leading-relaxed max-w-2xl">
+              <p>
+                I am a Computer Science Engineering student and developer focused on building practical web applications, business systems, and digital products.
+              </p>
+              <p>
+                My work spans across responsive frontend interfaces, backend APIs, relational and document databases, and production deployments. I am drawn to solid software engineering principles, clean application architecture, and reliable performance.
+              </p>
+              <p className="text-sm font-mono text-theme-muted/80">
+                Currently strengthening my foundations in Data Structures &amp; Algorithms, Java, Spring Boot, database design, and system architecture.
+              </p>
+            </div>
           </div>
 
           {/* Right Column: Key Details */}

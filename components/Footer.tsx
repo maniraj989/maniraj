@@ -29,18 +29,19 @@ export default function Footer() {
               Maniraj Sharma
             </div>
             <p className="text-xs font-mono text-theme-muted mt-1">
-              Full-Stack Web Developer · India
+              Full-Stack Developer · Software Engineering · India
             </p>
           </div>
 
           {/* Center Links */}
           <div className="flex flex-wrap items-center gap-6 text-xs font-mono text-theme-muted">
-            <a href="#hero" className="hover:text-theme-text transition-colors">Home</a>
-            <a href="#about" className="hover:text-theme-text transition-colors">About</a>
-            <a href="#work" className="hover:text-theme-text transition-colors">Work</a>
-            <a href="#stack" className="hover:text-theme-text transition-colors">Stack</a>
-            <a href="#experience" className="hover:text-theme-text transition-colors">Experience</a>
-            <a href="#contact" className="hover:text-theme-text transition-colors">Contact</a>
+            <a href="/#hero" className="hover:text-theme-text transition-colors">Home</a>
+            <a href="/#about" className="hover:text-theme-text transition-colors">About</a>
+            <a href="/#work" className="hover:text-theme-text transition-colors">Work</a>
+            <a href="/#stack" className="hover:text-theme-text transition-colors">Stack</a>
+            <a href="/#experience" className="hover:text-theme-text transition-colors">Experience</a>
+            <a href="/#contact" className="hover:text-theme-text transition-colors">Contact</a>
+            <a href="/resume" className="hover:text-theme-text transition-colors">Resume</a>
           </div>
 
           {/* Socials */}

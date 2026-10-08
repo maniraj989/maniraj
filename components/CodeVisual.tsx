@@ -64,7 +64,7 @@ export default function CodeVisual() {
                 <span className="text-theme-muted/40 select-none w-4 text-right">1</span>
                 <span>
                   <span className="text-[var(--accent-color)]">interface</span>{" "}
-                  <span className="text-emerald-500">FullStackDeveloper</span> &#123;
+                  <span className="text-emerald-500">SoftwareDeveloper</span> &#123;
                 </span>
               </div>
               <div className="flex gap-4">
@@ -82,30 +82,46 @@ export default function CodeVisual() {
               <div className="flex gap-4">
                 <span className="text-theme-muted/40 select-none w-4 text-right">4</span>
                 <span className="pl-4">
-                  stack: [<span className="text-emerald-500">&quot;React&quot;</span>,{" "}
-                  <span className="text-emerald-500">&quot;Next.js&quot;</span>,{" "}
-                  <span className="text-emerald-500">&quot;TypeScript&quot;</span>,{" "}
-                  <span className="text-emerald-500">&quot;Node.js&quot;</span>];
+                  focus: <span className="text-amber-500">&quot;Full-stack applications &amp; business systems&quot;</span>;
                 </span>
               </div>
               <div className="flex gap-4">
                 <span className="text-theme-muted/40 select-none w-4 text-right">5</span>
                 <span className="pl-4">
-                  focus: <span className="text-amber-500">&quot;Web applications &amp; systems&quot;</span>;
+                  frontend: [<span className="text-emerald-500">&quot;React&quot;</span>,{" "}
+                  <span className="text-emerald-500">&quot;Next.js&quot;</span>,{" "}
+                  <span className="text-emerald-500">&quot;TypeScript&quot;</span>];
                 </span>
               </div>
               <div className="flex gap-4">
                 <span className="text-theme-muted/40 select-none w-4 text-right">6</span>
                 <span className="pl-4">
-                  available: <span className="text-[var(--accent-color)] font-bold">true</span>;
+                  backend: [<span className="text-emerald-500">&quot;Node.js&quot;</span>,{" "}
+                  <span className="text-emerald-500">&quot;Express&quot;</span>,{" "}
+                  <span className="text-emerald-500">&quot;Java&quot;</span>,{" "}
+                  <span className="text-emerald-500">&quot;Spring Boot&quot;</span>];
                 </span>
               </div>
               <div className="flex gap-4">
                 <span className="text-theme-muted/40 select-none w-4 text-right">7</span>
+                <span className="pl-4">
+                  databases: [<span className="text-emerald-500">&quot;PostgreSQL&quot;</span>,{" "}
+                  <span className="text-emerald-500">&quot;Supabase&quot;</span>,{" "}
+                  <span className="text-emerald-500">&quot;MongoDB&quot;</span>];
+                </span>
+              </div>
+              <div className="flex gap-4">
+                <span className="text-theme-muted/40 select-none w-4 text-right">8</span>
+                <span className="pl-4">
+                  available: <span className="text-[var(--accent-color)] font-bold">true</span>;
+                </span>
+              </div>
+              <div className="flex gap-4">
+                <span className="text-theme-muted/40 select-none w-4 text-right">9</span>
                 <span>&#125;</span>
               </div>
               <div className="flex gap-4 pt-1">
-                <span className="text-theme-muted/40 select-none w-4 text-right">8</span>
+                <span className="text-theme-muted/40 select-none w-4 text-right">10</span>
                 <span>
                   <span className="text-[var(--accent-color)]">export default</span>{" "}
                   <span className="text-emerald-500">ManirajSharma</span>;
@@ -121,33 +137,29 @@ export default function CodeVisual() {
               <div className="flex gap-4">
                 <span className="text-theme-muted/40 select-none w-4 text-right">2</span>
                 <span className="pl-4">
-                  <span className="text-[var(--accent-color)]">&quot;frontend&quot;</span>: &#123;
+                  <span className="text-[var(--accent-color)]">&quot;frontend&quot;</span>: [<span className="text-amber-500">&quot;React&quot;</span>, <span className="text-amber-500">&quot;Next.js&quot;</span>, <span className="text-amber-500">&quot;TypeScript&quot;</span>, <span className="text-amber-500">&quot;Tailwind CSS&quot;</span>],
                 </span>
               </div>
               <div className="flex gap-4">
                 <span className="text-theme-muted/40 select-none w-4 text-right">3</span>
-                <span className="pl-8">
-                  <span className="text-emerald-500">&quot;framework&quot;</span>: <span className="text-amber-500">&quot;Next.js App Router&quot;</span>,
+                <span className="pl-4">
+                  <span className="text-[var(--accent-color)]">&quot;backend&quot;</span>: [<span className="text-amber-500">&quot;Node.js&quot;</span>, <span className="text-amber-500">&quot;Express.js&quot;</span>, <span className="text-amber-500">&quot;Java&quot;</span>, <span className="text-amber-500">&quot;Spring Boot&quot;</span>],
                 </span>
               </div>
               <div className="flex gap-4">
                 <span className="text-theme-muted/40 select-none w-4 text-right">4</span>
-                <span className="pl-8">
-                  <span className="text-emerald-500">&quot;ui&quot;</span>: <span className="text-amber-500">&quot;Tailwind CSS&quot;</span>
+                <span className="pl-4">
+                  <span className="text-[var(--accent-color)]">&quot;databases&quot;</span>: [<span className="text-amber-500">&quot;PostgreSQL&quot;</span>, <span className="text-amber-500">&quot;Supabase&quot;</span>, <span className="text-amber-500">&quot;MongoDB&quot;</span>],
                 </span>
               </div>
               <div className="flex gap-4">
                 <span className="text-theme-muted/40 select-none w-4 text-right">5</span>
-                <span className="pl-4">&#125;,</span>
-              </div>
-              <div className="flex gap-4">
-                <span className="text-theme-muted/40 select-none w-4 text-right">6</span>
                 <span className="pl-4">
-                  <span className="text-[var(--accent-color)]">&quot;backend&quot;</span>: [<span className="text-amber-500">&quot;Node.js&quot;</span>, <span className="text-amber-500">&quot;Express.js&quot;</span>, <span className="text-amber-500">&quot;PostgreSQL&quot;</span>, <span className="text-amber-500">&quot;MongoDB&quot;</span>]
+                  <span className="text-[var(--accent-color)]">&quot;tooling&quot;</span>: [<span className="text-amber-500">&quot;Git&quot;</span>, <span className="text-amber-500">&quot;GitHub&quot;</span>, <span className="text-amber-500">&quot;Docker&quot;</span>, <span className="text-amber-500">&quot;Vercel&quot;</span>]
                 </span>
               </div>
               <div className="flex gap-4">
-                <span className="text-theme-muted/40 select-none w-4 text-right">7</span>
+                <span className="text-theme-muted/40 select-none w-4 text-right">6</span>
                 <span>&#125;</span>
               </div>
             </div>
