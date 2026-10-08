@@ -126,6 +126,15 @@ function ToolSvg({ name }: { name: string }) {
           <path d="M11.905 0C5.556 0 .408 4.945.037 11.206c-.023.395.275.733.67.733h9.617l-6.84 10.978c-.28.45.15 1.01.636.83l16.14-11.45c.42-.298.24-.962-.27-.962H11.53l6.57-10.45C18.39.42 17.96 0 17.47 0h-5.565z" />
         </svg>
       );
+    case "REST APIs":
+      return (
+        <svg className="w-7 h-7 text-[#F97316]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <rect x="2" y="2" width="20" height="8" rx="2" ry="2" />
+          <rect x="2" y="14" width="20" height="8" rx="2" ry="2" />
+          <line x1="6" y1="6" x2="6.01" y2="6" />
+          <line x1="6" y1="18" x2="6.01" y2="18" />
+        </svg>
+      );
     case "HTML & CSS":
       return (
         <div className="w-7 h-7 rounded bg-[#E34F26] text-white font-mono font-bold text-[10px] flex items-center justify-center">
@@ -172,20 +181,27 @@ export default function ToolsGrid() {
           {toolsData.map((tool) => (
             <div
               key={tool.name}
-              className="group p-5 rounded-xl bg-theme-surface border border-theme-border hover:border-[var(--accent-color)] transition-all duration-200 hover:-translate-y-1 shadow-xs hover:shadow-md flex flex-col justify-between"
+              className={`group p-5 rounded-xl bg-theme-surface border ${
+                tool.isPrimary ? "border-theme-borderStrong" : "border-theme-border"
+              } hover:border-[var(--accent-color)] transition-all duration-200 hover:-translate-y-1 shadow-xs hover:shadow-md flex flex-col justify-between`}
             >
               <div className="flex items-center justify-between mb-4">
                 <div className="w-10 h-10 rounded-lg bg-theme-elevated border border-theme-border flex items-center justify-center transition-transform duration-200 group-hover:scale-105">
                   <ToolSvg name={tool.name} />
                 </div>
-                <span className="text-[10px] font-mono uppercase tracking-wider text-theme-muted">
-                  {tool.category}
-                </span>
+                <div className="flex items-center gap-1.5">
+                  {tool.isPrimary && (
+                    <span className="w-1.5 h-1.5 rounded-full bg-[var(--accent-color)]" title="Primary Focus" />
+                  )}
+                  <span className="text-[10px] font-mono uppercase tracking-wider text-theme-muted">
+                    {tool.category}
+                  </span>
+                </div>
               </div>
 
               <div>
-                <h3 className="font-sans font-bold text-base text-theme-text tracking-tight group-hover:text-[var(--accent-color)] transition-colors">
-                  {tool.name}
+                <h3 className="font-sans font-bold text-base text-theme-text tracking-tight group-hover:text-[var(--accent-color)] transition-colors flex items-center justify-between">
+                  <span>{tool.name}</span>
                 </h3>
                 <p className="text-xs font-mono text-theme-muted mt-1 leading-relaxed">
                   {tool.tagline}

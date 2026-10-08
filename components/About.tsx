@@ -21,7 +21,7 @@ export default function About() {
 
             <div className="space-y-4 text-theme-muted text-base sm:text-lg font-normal leading-relaxed max-w-2xl">
               <p>
-                I am a Computer Science Engineering student and developer focused on building practical web applications, business systems, and digital products.
+                I am a 2nd-year Computer Science Engineering student at SRM IST and a full-stack developer with a backend/software engineering focus, building practical web applications, business systems, and digital products.
               </p>
               <p>
                 My work spans across responsive frontend interfaces, backend APIs, relational and document databases, and production deployments. I am drawn to solid software engineering principles, clean application architecture, and reliable performance.
@@ -50,7 +50,7 @@ export default function About() {
                 FULL-STACK
               </span>
               <span className="text-xs font-mono tracking-wider uppercase text-theme-muted mt-1 block">
-                Primary Focus
+                Backend / SE Focus
               </span>
             </div>
 

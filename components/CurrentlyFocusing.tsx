@@ -1,28 +1,34 @@
 export default function CurrentlyFocusing() {
   const focusAreas = [
     {
+      number: "01",
       title: "Data Structures & Algorithms",
-      detail: "Strengthening problem solving, time/space complexity analysis, and algorithmic patterns.",
+      detail: "Java-based DSA preparation for coding interviews and placements.",
     },
     {
+      number: "02",
       title: "Java & Spring Boot",
-      detail: "Enterprise backend services, REST API development, and object-oriented architecture.",
+      detail: "Building stronger backend development fundamentals and production-style REST APIs.",
     },
     {
+      number: "03",
       title: "Backend Engineering",
-      detail: "API protocols, authentication workflows, caching, and server performance.",
+      detail: "API design, authentication, validation, business logic and scalable application structure.",
     },
     {
-      title: "Database Design",
-      detail: "Relational data modeling, query optimization, indexing, and transactional integrity.",
+      number: "04",
+      title: "SQL & Database Design",
+      detail: "PostgreSQL, relational modeling, queries, indexing and data integrity.",
     },
     {
+      number: "05",
       title: "System Design Fundamentals",
-      detail: "Scalability, modular architecture, distributed data basics, and fault tolerance.",
+      detail: "Learning how real-world software systems are structured, scaled and maintained.",
     },
     {
+      number: "06",
       title: "Full-Stack Development",
-      detail: "End-to-end web applications with Next.js, TypeScript, and clean code principles.",
+      detail: "Using React/Next.js with backend APIs to build complete production-oriented applications.",
     },
   ];
 
@@ -39,17 +45,17 @@ export default function CurrentlyFocusing() {
           </h2>
         </div>
 
-        {/* 6-item Grid */}
+        {/* 6-item Grid in exact priority order */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
-          {focusAreas.map((area, index) => (
+          {focusAreas.map((area) => (
             <div
-              key={area.title}
+              key={area.number}
               className="p-5 rounded-xl bg-theme-surface border border-theme-border hover:border-theme-borderStrong transition-all duration-150 flex flex-col justify-between"
             >
               <div>
                 <div className="flex items-center justify-between mb-2.5">
-                  <span className="text-[11px] font-mono text-[var(--accent-color)] font-medium">
-                    0{index + 1}
+                  <span className="text-[11px] font-mono text-[var(--accent-color)] font-semibold">
+                    {area.number}
                   </span>
                   <span className="w-1.5 h-1.5 rounded-sm bg-[var(--accent-color)]/60" />
                 </div>

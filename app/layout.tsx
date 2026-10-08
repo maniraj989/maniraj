@@ -16,17 +16,15 @@ export const metadata: Metadata = {
     template: "%s | Maniraj Sharma",
   },
   description:
-    "Maniraj Sharma is a Computer Science Engineering student and full-stack developer building web applications, business systems and digital products.",
+    "Maniraj Sharma is a Computer Science Engineering student and full-stack developer with a backend/software engineering focus, building web applications, business systems and digital products.",
   keywords: [
     "Maniraj Sharma",
     "manirajsharma",
     "maniraj sharma",
     "Full-Stack Developer",
     "Software Engineer",
-    "Computer Science Engineer",
-    "Next.js Developer",
-    "React Developer",
-    "Node.js",
+    "Backend Developer",
+    "Java Developer",
     "Spring Boot",
     "PostgreSQL",
     "Supabase",
@@ -41,7 +39,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Maniraj Sharma — Full-Stack Developer & Software Engineer",
     description:
-      "Maniraj Sharma is a Computer Science Engineering student and full-stack developer building web applications, business systems and digital products.",
+      "Maniraj Sharma is a Computer Science Engineering student and full-stack developer with a backend/software engineering focus, building web applications, business systems and digital products.",
     url: "https://www.manirajsharma.com.np",
     siteName: "Maniraj Sharma",
     locale: "en_US",
@@ -51,7 +49,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Maniraj Sharma — Full-Stack Developer & Software Engineer",
     description:
-      "Maniraj Sharma is a Computer Science Engineering student and full-stack developer building web applications, business systems and digital products.",
+      "Maniraj Sharma is a Computer Science Engineering student and full-stack developer with a backend/software engineering focus, building web applications, business systems and digital products.",
     creator: "@maniraj989",
   },
 };
@@ -71,7 +69,7 @@ export default function RootLayout({
         alternateName: ["manirajsharma", "maniraj sharma"],
         jobTitle: "Full-Stack Developer & Software Engineer",
         description:
-          "Computer Science Engineering student and full-stack developer building practical web applications, business systems, and digital products.",
+          "Computer Science Engineering student and full-stack developer with a backend/software engineering focus, building practical web applications, business systems, and digital products.",
         url: "https://www.manirajsharma.com.np",
         sameAs: [
           "https://github.com/maniraj989",

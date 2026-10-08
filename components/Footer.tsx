@@ -29,7 +29,7 @@ export default function Footer() {
               Maniraj Sharma
             </div>
             <p className="text-xs font-mono text-theme-muted mt-1">
-              Full-Stack Developer · Software Engineering · India
+              Full-Stack Developer · Backend &amp; Software Engineering Focus · India
             </p>
           </div>
 

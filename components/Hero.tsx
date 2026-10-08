@@ -49,13 +49,13 @@ export default function Hero() {
             {/* Role Eyebrow */}
             <div className="mt-6 mb-4">
               <span className="text-xs font-mono font-semibold tracking-[0.22em] text-theme-muted uppercase">
-                FULL-STACK DEVELOPER · SOFTWARE ENGINEERING · INDIA
+                FULL-STACK DEVELOPER · BACKEND &amp; SOFTWARE ENGINEERING FOCUS · INDIA
               </span>
             </div>
 
             {/* Concrete, Straightforward Copy */}
             <p className="text-theme-muted text-base sm:text-lg font-normal leading-relaxed max-w-lg mb-8">
-              Building practical web applications, business systems, and digital products with clean architecture, responsive interfaces, and reliable engineering.
+              Building practical web applications, business systems, and backend services with clean architecture, responsive interfaces, and reliable engineering.
             </p>
 
             {/* Action Buttons & Socials - Clean Rectangular Geometry (No Pills) */}

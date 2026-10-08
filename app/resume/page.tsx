@@ -55,7 +55,7 @@ export default function ResumePage() {
               Maniraj Sharma
             </h1>
             <p className="text-xs font-mono font-semibold tracking-widest uppercase text-theme-muted mb-5">
-              Full-Stack Developer · Software Engineering · India
+              Full-Stack Developer · Backend &amp; Software Engineering Focus · India
             </p>
 
             <div className="flex flex-wrap items-center gap-y-2 gap-x-6 text-xs font-mono text-theme-muted">
@@ -99,7 +99,7 @@ export default function ResumePage() {
               Professional Summary
             </h2>
             <p className="text-sm sm:text-base text-theme-muted leading-relaxed font-normal">
-              Computer Science Engineering student and full-stack developer dedicated to building practical web applications, business systems, and digital products. Experienced across responsive frontend interfaces, backend APIs, relational and document databases, and production deployments with an emphasis on clean architecture, reliable engineering, and continuous learning.
+              2nd-year Computer Science Engineering student at SRM IST and full-stack developer with a backend/software engineering focus, dedicated to building practical web applications, business systems, and digital products. Experienced across responsive frontend interfaces, backend APIs, relational and document databases, and production deployments with an emphasis on clean architecture, reliable engineering, and continuous learning.
             </p>
           </section>
 
